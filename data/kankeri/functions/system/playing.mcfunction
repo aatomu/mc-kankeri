@@ -24,9 +24,6 @@ execute as @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind] at @s on attacker if e
 execute unless entity @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind] run function kankeri:system/game/win_hunter
 ##PlayerFinder
 execute as @a[team=Kankeri.Hunter,nbt={SelectedItem:{tag:{isPlayerFinder:1b}}}] run function kankeri:system/player_finder
-##エフェクト
-execute as @a[team=Kankeri.Hunter] run effect give @s speed 1 3 true
-
 
 #子
 ##脱出判定

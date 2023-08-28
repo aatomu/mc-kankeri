@@ -18,17 +18,19 @@ clear @a[team=Kankeri.Player]
 give @a[team=Kankeri.Player] lingering_potion{display:{Name:'{"text": "盲目の残留ポーション","color":"gray","bold": true,"italic": false}'},CustomPotionEffects:[{Id:15,Amplifier:0b,Duration:200}],CustomPotionColor:0} 3
 give @a[team=Kankeri.Player] stick{display:{Name:'{"text": "KnockBack Stick","color":"gold","bold": true,"italic": false}'},Enchantments:[{id:"minecraft:knockback",lvl:5s}]} 1
 ###エフェクト
+effect give @a[team=Kankeri.Player] minecraft:saturation 1 127
 effect give @a[team=Kankeri.Player] resistance infinite 127 true
 ###解放Ignore
 tag @a[team=Kankeri.Player] add Kankeri.Game.Ignore
 ##鬼 関連
 ###エフェクト
-effect give @a[team=Kankeri.Hunter] resistance infinite 127 true
-effect give @a[team=Kankeri.Hunter] speed infinite 3 true
+effect give @a[team=Kankeri.Hunter] minecraft:saturation 1 127
+effect give @a[team=Kankeri.Hunter] slowness 5 127 true
 effect give @a[team=Kankeri.Hunter] blindness 10 0 true
 effect give @a[team=Kankeri.Hunter] darkness 10 0 true
-effect give @a[team=Kankeri.Hunter] slowness 5 127 true
 effect give @a[team=Kankeri.Hunter] weakness 10 127 true
+effect give @a[team=Kankeri.Hunter] resistance infinite 127 true
+effect give @a[team=Kankeri.Hunter] speed infinite 3 true
 ####アイテム
 loot give @a[team=Kankeri.Hunter] loot kankeri:player_finder
 give @a[team=Kankeri.Hunter] bow{Unbreakable:1b,Enchantments:[{id:"minecraft:infinity",lvl:1s}]}
