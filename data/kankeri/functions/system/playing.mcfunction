@@ -26,9 +26,9 @@ execute unless entity @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind] run functio
 ##PlayerFinder
 execute as @a[team=Kankeri.Hunter,nbt={SelectedItem:{tag:{isPlayerFinder:1b}}}] run function kankeri:system/player_finder
 ##エフェクト
-execute as @a[team=Kankeri.Hunter] if entity @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind,distance=200..] run effect give @s speed 5 0 true
-execute as @a[team=Kankeri.Hunter] if entity @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind,distance=100..] run effect give @s speed 3 0 true
-execute as @a[team=Kankeri.Hunter] if entity @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind,distance=10..] run effect give @s speed 1 0 true
+execute as @a[team=Kankeri.Hunter] at @s if entity @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind,distance=200..] run effect give @s speed 0 8 true
+execute as @a[team=Kankeri.Hunter] at @s if entity @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind,distance=100..] run effect give @s speed 0 5 true
+execute as @a[team=Kankeri.Hunter] at @s if entity @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind,distance=10..] run effect give @s speed 0 3 true
 
 #子
 ##脱出判定
