@@ -33,11 +33,11 @@ effect give @a[team=Kankeri.Hunter] weakness 10 127 true
 effect give @a[team=Kankeri.Hunter] resistance infinite 127 true
 ####アイテム
 loot give @a[team=Kankeri.Hunter] loot kankeri:player_finder
-give @a[team=Kankeri.Player] stick{display:{Name:'{"text": "のっくばっく すてぃっく","color":"gold","bold": true,"italic": false}'},Enchantments:[{id:"minecraft:knockback",lvl:10s}]} 1
+give @a[team=Kankeri.Hunter] stick{display:{Name:'{"text": "ノックバック スティック","color":"gold","bold": true,"italic": false}'},Enchantments:[{id:"minecraft:knockback",lvl:10s}]} 1
 give @a[team=Kankeri.Hunter] bow{Unbreakable:1b,Enchantments:[{id:"minecraft:infinity",lvl:1s}]}
 give @a[team=Kankeri.Hunter] arrow 1
 give @a[team=Kankeri.Hunter] red_stained_glass 128
-give @a[team=Kankeri.Player] sweet_berries 64
+give @a[team=Kankeri.Hunter] sweet_berries 64
 
 #全員TP
 tp @a[team=Kankeri.Hunter] @e[type=armor_stand,tag=Kankeri.Can.Center,limit=1]
