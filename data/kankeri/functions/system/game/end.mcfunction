@@ -18,6 +18,6 @@ execute as @a at @s run playsound ui.toast.challenge_complete master @s ~ ~ ~ 0.
 tag @a[team=Kankeri.Player] remove Kankeri.Game.Bind
 team leave @a[team=Kankeri.Hunter]
 team leave @a[team=Kankeri.Player]
-scoreboard players set *GameTimer Kankeri.System 0
+scoreboard players set *GameTimer Kankeri.System -1
 bossbar set kankeri:time players
-fill ~10 ~ ~10 ~-10 ~ ~-10 red_stained_glass
+fill ~10 ~ ~10 ~-10 ~ ~-10 air replace red_stained_glass 
