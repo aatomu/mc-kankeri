@@ -2,7 +2,7 @@
 tellraw @a {"text":"Kankeri Datapack Is Loaded"}
 tellraw @a {"text":"Main Creator: @atomu21263"}
 tellraw @a {"text":"Commands:"}
-tellraw @a {"text":"/scoreboard players set *HunterPlayer <Count>"}
+tellraw @a {"text":"/scoreboard players set *Hunter <Count>"}
 tellraw @a {"text":"> 鬼の人数を指定する"}
 tellraw @a {"text":"/function kankeri:game/place"}
 tellraw @a {"text":"> 缶を設置する"}
@@ -19,7 +19,8 @@ scoreboard objectives add Kankeri.System dummy
 scoreboard players set *20 Kankeri.System 20
 scoreboard players set *60 Kankeri.System 60
 
-scoreboard players set *HunterPlayer Kankeri.System 4
+scoreboard players set *Hunter Kankeri.System 4
+scoreboard players set *HunterCount Kankeri.System 0
 
 scoreboard players add *IsCanPlaced Kankeri.System 0
 

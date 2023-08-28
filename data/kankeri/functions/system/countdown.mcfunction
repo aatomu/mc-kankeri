@@ -12,3 +12,6 @@ execute if score *CountDown Kankeri.System matches 20 run title @a title {"text"
 execute if score *CountDown Kankeri.System matches 20 as @a at @s run playsound block.note_block.hat master @s ~ ~ ~ 1 0.5
 execute if score *CountDown Kankeri.System matches 0 run title @a title {"text": "Start!"}
 execute if score *CountDown Kankeri.System matches 0 as @a at @s run playsound minecraft:entity.ender_dragon.ambient master @s ~ ~ ~ 1 1
+execute if score *CountDown Kankeri.System matches 0 run function kankeri:system/game/start
+
+scoreboard players remove *CountDown Kankeri.System 1

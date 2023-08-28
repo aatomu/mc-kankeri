@@ -1,1 +1,3 @@
-scoreboard players set *CountDown Kankeri.System 130
+execute unless entity @e[tag=Kankeri.Can] run tellraw @s {"text":"缶が見つけられませんでした。缶の近くで実行してください","color":"red","bold": true}
+execute if entity @e[tag=Kankeri.Can] if score *PlayerCount Kankeri.System <= *Hunter Kankeri.System run tellraw @s {"text":"子が鬼の設定値に達しないので失敗しました。","color":"red","bold": true}
+execute if entity @e[tag=Kankeri.Can] if score *PlayerCount Kankeri.System > *Hunter Kankeri.System run scoreboard players set *CountDown Kankeri.System 130

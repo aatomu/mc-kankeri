@@ -5,8 +5,10 @@ execute as @e[type=armor_stand,tag=Kankeri.Can.Center] at @s rotated ~180 ~ run 
 
 # プレイヤーをナンバリング
 execute as @a[team=Kankeri.Player] unless score @s Kankeri.Number = @s Kankeri.Number run function kankeri:system/set_num
+#プレイヤーカウント
+execute store result score *PlayerCount Kankeri.System if entity @a[team=Kankeri.Player]
 
 # カウントダウン
 execute if score *CountDown Kankeri.System matches 0.. run function kankeri:system/countdown
 # ゲームタイマー
-execute if score *GameTimer Kankeri.System matches 0.. run function kankeri:system/timer
+execute if score *GameTimer Kankeri.System matches 0.. run function kankeri:system/playing
