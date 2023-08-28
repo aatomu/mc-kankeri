@@ -32,7 +32,7 @@ execute as @a[team=Kankeri.Hunter] at @s if entity @a[team=Kankeri.Player,tag=!K
 
 #子
 ##脱出判定
-execute as @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind,tag=!Kankeri.Game.Ignore] at @s if entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..0.5] run tellraw @a [{"selector":"@s"},{"text": "は 子 を 解放した!"}]
+execute as @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind,tag=!Kankeri.Game.Ignore] at @s if entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..0.5] run tellraw @a [{"selector":"@s"},{"text":  "は 子 を 解放した!"}]
 execute as @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind,tag=!Kankeri.Game.Ignore] at @s if entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..0.5] run tag @a[team=Kankeri.Player,tag=Kankeri.Game.Bind] remove Kankeri.Game.Bind
 execute as @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind,tag=!Kankeri.Game.Ignore] at @s if entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..0.5] run tag @s add Kankeri.Game.Ignore
 execute as @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind,tag=Kankeri.Game.Ignore] at @s unless entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..0.5] run tag @s remove Kankeri.Game.Ignore
