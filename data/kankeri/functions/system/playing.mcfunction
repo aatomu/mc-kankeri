@@ -32,12 +32,13 @@ execute as @a[team=Kankeri.Hunter] at @s if entity @a[team=Kankeri.Player,tag=!K
 execute as @a[team=Kankeri.Hunter] at @s if entity @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind,distance=100..] run effect give @s speed 1 5 true
 execute as @a[team=Kankeri.Hunter] at @s if entity @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind,distance=10..] run effect give @s speed 1 3 true
 ##円のマーカー
-execute as @a[team=Kankeri.Hunter] at @s facing entity @e[type=armor_stand,tag=Kankeri.Can.Center] feet rotated ~ 0 run particle dust 1 0 1 0.5 ^ ^1 ^1.5 0 0 0 0 10 force @s
+execute as @a[team=Kankeri.Hunter] at @s facing entity @e[type=armor_stand,tag=Kankeri.Can.Center] feet rotated ~ 0 run particle dust 1 0 1 0.2 ^ ^0.5 ^1.5 0 0 0 0 10 force @s
 #子
 ##勝利判定
 execute if score *GameTimer Kankeri.System matches 0 run function kankeri:system/game/win_player
 ##拘束処理
 execute as @a[team=Kankeri.Player,tag=Kankeri.Game.Bind] at @s unless entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..3] run tp @s @e[type=armor_stand,tag=Kankeri.Can.Center,limit=1]
+execute as @a[team=Kankeri.Player,tag=Kankeri.Game.Bind] run effect give @s mining_fatigue 1 127 true
 ##もくもく
 execute as @e[type=area_effect_cloud,nbt={Effects:[{Duration:200,Id:14}]}] at @s run particle minecraft:campfire_signal_smoke ~ ~ ~ 5 5 5 0 50 force @a
 
