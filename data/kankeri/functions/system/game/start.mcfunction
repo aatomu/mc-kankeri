@@ -10,6 +10,9 @@ bossbar set kankeri:time players @a
 #チーム割り当て
 function kankeri:system/game/team
 
+clear @a[team=Kankeri.Hunter]
+clear @a[team=Kankeri.Player]
+
 #逃げ アイテム
 give @a[team=Kankeri.Player] lingering_potion{display:{Name:'{"text": "盲目の残留ポーション","color":"gray","bold": true,"italic": false}'},CustomPotionEffects:[{Id:15,Amplifier:0b,Duration:200}],CustomPotionColor:0} 3
 give @a[team=Kankeri.Player] stick{display:{Name:'{"text": "KnockBack Stick","color":"gold","bold": true,"italic": false}'},Enchantments:[{id:"minecraft:knockback",lvl:5s}]} 1
