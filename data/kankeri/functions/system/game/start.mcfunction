@@ -26,6 +26,7 @@ effect give @a[team=Kankeri.Hunter] weakness 10 127 true
 #鬼 アイテム
 give @a[team=Kankeri.Hunter] bow{Unbreakable:1b,Enchantments:[{id:"minecraft:infinity",lvl:1s}]}
 give @a[team=Kankeri.Hunter] arrow 1
+give @a[team=Kankeri.Hunter] red_stained_glass 128
 
 #全員TP
 tp @a[team=Kankeri.Hunter] @e[type=armor_stand,tag=Kankeri.Can.Center,limit=1]

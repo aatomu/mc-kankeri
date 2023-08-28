@@ -6,8 +6,10 @@ effect clear @a[team=Kankeri.Hunter]
 effect clear @a[team=Kankeri.Player]
 clear @a[team=Kankeri.Hunter] bow
 clear @a[team=Kankeri.Hunter] arrow
+clear @a[team=Kankeri.Hunter] red_stained_glass
 clear @a[team=Kankeri.Player] bow
 clear @a[team=Kankeri.Player] arrow
+clear @a[team=Kankeri.Player] red_stained_glass
 
 #音
 execute as @a at @s run playsound ui.toast.challenge_complete master @s ~ ~ ~ 0.7
@@ -18,3 +20,4 @@ team leave @a[team=Kankeri.Hunter]
 team leave @a[team=Kankeri.Player]
 scoreboard players set *GameTimer Kankeri.System 0
 bossbar set kankeri:time players
+fill ~10 ~ ~10 ~-10 ~ ~-10 red_stained_glass
