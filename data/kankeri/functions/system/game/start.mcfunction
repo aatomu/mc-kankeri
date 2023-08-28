@@ -12,13 +12,17 @@ function kankeri:system/game/team
 
 #逃げ アイテム
 give @a[team=Kankeri.Player] lingering_potion{display:{Name:'{"text": "盲目の残留ポーション","color":"gray","bold": true,"italic": false}'},CustomPotionEffects:[{Id:15,Amplifier:0b,Duration:200}],CustomPotionColor:0} 3
+#逃げ エフェクト
+effect give @a[team=Kankeri.Player] resistance infinite 127 true
 #逃げ 解放Ignore
 tag @a[team=Kankeri.Player] add Kankeri.Game.Ignore
 
 #鬼 エフェクト
-effect give @a[team=Kankeri.Hunter] blindness 5 0 true
+effect give @a[team=Kankeri.Hunter] resistance infinite 127 true
+effect give @a[team=Kankeri.Hunter] blindness 10 0 true
+effect give @a[team=Kankeri.Hunter] darkness 10 0 true
 effect give @a[team=Kankeri.Hunter] slowness 5 127 true
-effect give @a[team=Kankeri.Hunter] weakness infinite 127 true
+effect give @a[team=Kankeri.Hunter] weakness 10 127 true
 #鬼 アイテム
 give @a[team=Kankeri.Hunter] bow{Unbreakable:1b,Enchantments:[{id:"minecraft:infinity",lvl:1s}]}
 give @a[team=Kankeri.Hunter] arrow 1
