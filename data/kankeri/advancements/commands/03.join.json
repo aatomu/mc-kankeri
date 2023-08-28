@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:blue_banner"
+    },
+    "title": "プレイヤーを参加させる               ",
+    "description": "/team join Kankeri.Player <セレクター>",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "kankeri:commands/02.hunter",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

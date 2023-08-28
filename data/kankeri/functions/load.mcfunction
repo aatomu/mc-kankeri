@@ -1,19 +1,7 @@
 #通知
 tellraw @a {"text":"Kankeri Datapack Is Loaded"}
-tellraw @a {"text":"Main Creator: @atomu21263"}
-tellraw @a {"text":"Commands:"}
-tellraw @a {"text":"/scoreboard players set *Hunter <Count>"}
-tellraw @a {"text":"> 鬼の人数を指定する"}
-tellraw @a {"text":"/function kankeri:game/place"}
-tellraw @a {"text":"> 缶を設置する"}
-tellraw @a {"text":"/team join Kankeri.Player <Selector>"}
-tellraw @a {"text":"> ゲームを開始する"}
-tellraw @a {"text":"/function kankeri:game/start"}
-tellraw @a {"text":"> ゲームを開始する"}
-tellraw @a {"text":"/function kankeri:game/remove"}
-tellraw @a {"text":"> 缶を削除する"}
-tellraw @a {"text":"/reload"}
-tellraw @a {"text":"> ゲームを強制終了する"}
+tellraw @a {"text":"Main Creator  : @atomu21263"}
+tellraw @a {"text":"Commands,Rule : Check For Advancement."}
 
 
 #スコアボード

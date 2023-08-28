@@ -1,0 +1,19 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:diamond_sword"
+    },
+    "title": "鬼のルール               ",
+    "description": "1.子を殴ると捕まえられる\n2.子が缶を蹴らないようにする\n3.子を時間以内に全員捕まえる",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "parent": "kankeri:rule/00.root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}
