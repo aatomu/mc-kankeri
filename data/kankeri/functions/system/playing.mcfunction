@@ -18,8 +18,8 @@ execute if score *GameTimer Kankeri.System < *TimerRedTick Kankeri.System run bo
 execute store result bossbar kankeri:time value run scoreboard players get *GameTimer Kankeri.System
 
 #鬼の判定
-execute as @a[team=Kankeri.Hunter] on target if entity @s[team=Kankeri.Player] run tellraw @a [{"selector":"@s"},{"text": "は 鬼 に 捕まった!"}]
-execute as @a[team=Kankeri.Hunter] on target if entity @s[team=Kankeri.Player] run tag @s add Kankeri.Game.Bind
+execute as @a[team=Kankeri.Hunter] on target if entity @s[team=Kankeri.Player,tag=!Kankeri.Game.Bind] run tellraw @a [{"selector":"@s"},{"text": "は 鬼 に 捕まった!"}]
+execute as @a[team=Kankeri.Hunter] on target if entity @s[team=Kankeri.Player,tag=!Kankeri.Game.Bind] run tag @s add Kankeri.Game.Bind
 #鬼の勝利判定
 execute unless entity @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind] run function kankeri:system/game/win_hunter
 
