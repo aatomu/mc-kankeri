@@ -16,4 +16,4 @@ team leave @a[team=Kankeri.Hunter]
 team leave @a[team=Kankeri.Player]
 scoreboard players set *GameTimer Kankeri.System -1
 bossbar set kankeri:time players
-fill ~10 ~ ~10 ~-10 ~ ~-10 air replace red_stained_glass
+fill ~10 ~10 ~10 ~-10 ~ ~-10 air replace red_stained_glass
