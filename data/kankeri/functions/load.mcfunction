@@ -12,6 +12,8 @@ tellraw @a {"text":"/function kankeri:game/start"}
 tellraw @a {"text":"> ゲームを開始する"}
 tellraw @a {"text":"/function kankeri:game/remove"}
 tellraw @a {"text":"> 缶を削除する"}
+tellraw @a {"text":"/reload"}
+tellraw @a {"text":"> ゲームを強制終了する"}
 
 
 #スコアボード
@@ -28,13 +30,22 @@ scoreboard players set *CountDown Kankeri.System -1
 scoreboard players set *GameTimeSec Kankeri.System 1200
 scoreboard players set *GameTimer Kankeri.System -1
 
+scoreboard players set *TimerYellowTick Kankeri.System 6000
+scoreboard players set *TimerRedTick Kankeri.System 1200
+scoreboard players set *TimerMin Kankeri.System 0
+scoreboard players set *TimerSec Kankeri.System 0
+
 scoreboard objectives add Kankeri.Number dummy
 scoreboard players add *Now Kankeri.Number 0
+
+
 #チーム
+team remove Kankeri.Hunter
 team add Kankeri.Hunter "鬼"
 team modify Kankeri.Hunter color red
 team modify Kankeri.Hunter friendlyFire false
 
+team remove Kankeri.Player
 team add Kankeri.Player "子"
 team modify Kankeri.Player color green
 team modify Kankeri.Player friendlyFire false
@@ -42,3 +53,4 @@ team modify Kankeri.Player friendlyFire false
 
 #ボスバー
 bossbar add kankeri:time ""
+bossbar set kankeri:time color green
