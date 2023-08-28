@@ -27,7 +27,7 @@ scoreboard players set *HunterCount Kankeri.System 0
 scoreboard players add *IsCanPlaced Kankeri.System 0
 
 scoreboard players set *CountDown Kankeri.System -1
-scoreboard players set *GameTimeSec Kankeri.System 1200
+scoreboard players set *GameTimeSec Kankeri.System 600
 scoreboard players set *GameTimer Kankeri.System -1
 
 scoreboard players set *TimerYellowTick Kankeri.System 6000
