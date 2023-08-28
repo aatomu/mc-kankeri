@@ -21,14 +21,14 @@ scoreboard players set *60 Kankeri.System 60
 
 scoreboard players set *HunterPlayer Kankeri.System 4
 
-scoreboard players set *GameTimeMin Kankeri.System 10
-scoreboard players set *GameTimeSec Kankeri.System 0
-
 scoreboard players add *IsCanPlaced Kankeri.System 0
 
-scoreboard players set *CountDown Kankeri.System 0
-scoreboard players set *GameTimer Kankeri.System 0
+scoreboard players set *CountDown Kankeri.System -1
+scoreboard players set *GameTimeSec Kankeri.System 1200
+scoreboard players set *GameTimer Kankeri.System -1
 
+scoreboard objectives add Kankeri.Number dummy
+scoreboard players add *Now Kankeri.Number 0
 #チーム
 team add Kankeri.Hunter "鬼"
 team modify Kankeri.Hunter color red

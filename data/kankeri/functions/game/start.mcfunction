@@ -1,0 +1,1 @@
+scoreboard players set *CountDown Kankeri.System 130
