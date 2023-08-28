@@ -17,23 +17,29 @@ execute if score *GameTimer Kankeri.System < *TimerRedTick Kankeri.System run bo
 
 execute store result bossbar kankeri:time value run scoreboard players get *GameTimer Kankeri.System
 
-#鬼の判定
+#鬼
+##束縛判定
 execute as @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind] at @s on attacker if entity @s[team=Kankeri.Hunter] as @p run function kankeri:system/bind
-#鬼の勝利判定
+##勝利判定
 execute unless entity @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind] run function kankeri:system/game/win_hunter
-#鬼のPlayerFinder
+##PlayerFinder
 execute as @a[team=Kankeri.Hunter,nbt={SelectedItem:{tag:{isPlayerFinder:1b}}}] run function kankeri:system/player_finder
-#逃げの判定
-execute as @a[team=Kankeri.Player,tag=!Kankeri.Game.Ignore] at @s if entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..0.5] run tellraw @a [{"selector":"@s"},{"text": "は 子 を 解放した!"}]
-execute as @a[team=Kankeri.Player,tag=!Kankeri.Game.Ignore] at @s if entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..0.5] run tag @a[team=Kankeri.Player,tag=Kankeri.Game.Bind] remove Kankeri.Game.Bind
-execute as @a[team=Kankeri.Player,tag=!Kankeri.Game.Ignore] at @s if entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..0.5] run tag @s add Kankeri.Game.Ignore
-execute as @a[team=Kankeri.Player,tag=Kankeri.Game.Ignore] at @s unless entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..0.5] run tag @s remove Kankeri.Game.Ignore
-#逃げの勝利判定
+##エフェクト
+execute as @a[team=Kankeri.Hunter] run effect give @s speed 1 3 true
+
+
+#子
+##脱出判定
+execute as @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind,tag=!Kankeri.Game.Ignore] at @s if entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..0.5] run tellraw @a [{"selector":"@s"},{"text": "は 子 を 解放した!"}]
+execute as @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind,tag=!Kankeri.Game.Ignore] at @s if entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..0.5] run tag @a[team=Kankeri.Player,tag=Kankeri.Game.Bind] remove Kankeri.Game.Bind
+execute as @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind,tag=!Kankeri.Game.Ignore] at @s if entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..0.5] run tag @s add Kankeri.Game.Ignore
+execute as @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind,tag=Kankeri.Game.Ignore] at @s unless entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..0.5] run tag @s remove Kankeri.Game.Ignore
+##勝利判定
 execute if score *GameTimer Kankeri.System matches 0 run function kankeri:system/game/win_player
-
-#逃げの拘束
+##拘束処理
 execute as @a[team=Kankeri.Player,tag=Kankeri.Game.Bind] at @s unless entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..3] run tp @s @e[type=armor_stand,tag=Kankeri.Can.Center,limit=1]
-
-#もくもく
+##もくもく
 execute as @e[type=area_effect_cloud,nbt={Effects:[{Duration:200,Id:15}]}] at @s run particle minecraft:campfire_signal_smoke ~ ~ ~ 2 2 2 0 20 force @a
+
+
 scoreboard players remove *GameTimer Kankeri.System 1
