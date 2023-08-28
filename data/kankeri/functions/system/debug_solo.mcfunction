@@ -1,3 +1,3 @@
 scoreboard players set *Hunter Kankeri.System 0
 team join Kankeri.Player @a
-function kankeri:game/start
+schedule function kankeri:game/start 5t
