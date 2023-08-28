@@ -41,3 +41,6 @@ give @a[team=Kankeri.Player] sweet_berries 64
 #全員TP
 tp @a[team=Kankeri.Hunter] @e[type=armor_stand,tag=Kankeri.Can.Center,limit=1]
 tp @a[team=Kankeri.Player] @e[type=armor_stand,tag=Kankeri.Can.Center,limit=1]
+
+#缶を飛ばす
+execute at @e[type=armor_stand,tag=Kankeri.Can.Center] facing entity @e[sort=random,limit=1] feet rotated ~ -50 run function kankeri:system/can/motion

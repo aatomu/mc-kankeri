@@ -23,9 +23,6 @@ scoreboard players set *TimerRedTick Kankeri.System 1200
 scoreboard players set *TimerMin Kankeri.System 0
 scoreboard players set *TimerSec Kankeri.System 0
 
-scoreboard objectives add Kankeri.Number dummy
-scoreboard players add *Now Kankeri.Number 0
-
 
 #チーム
 team remove Kankeri.Hunter
@@ -46,3 +43,7 @@ bossbar add kankeri:time ""
 
 #ストレージ
 data modify storage kankeri:_ Pos set value {X:0,Y:0,Z:0}
+
+
+#Motion用
+forceload add 1 1 -1 -1
