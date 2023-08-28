@@ -21,7 +21,7 @@ execute store result bossbar kankeri:time value run scoreboard players get *Game
 
 #鬼
 ##束縛判定
-execute as @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind] at @s on attacker if entity @s[team=Kankeri.Hunter] as @p run function kankeri:system/bind
+execute if entity @e[type=interaction,tag=Kankeri.Can.Interact,tag=!Kankeri.Can.Dropped] as @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind] at @s on attacker if entity @s[team=Kankeri.Hunter] as @p run function kankeri:system/bind
 ##勝利判定
 execute unless entity @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind] run function kankeri:system/game/win_hunter
 ##PlayerFinder
