@@ -24,6 +24,7 @@ effect give @a[team=Kankeri.Hunter] darkness 10 0 true
 effect give @a[team=Kankeri.Hunter] slowness 5 127 true
 effect give @a[team=Kankeri.Hunter] weakness 10 127 true
 #鬼 アイテム
+loot give @a loot kankeri:player_finder
 give @a[team=Kankeri.Hunter] bow{Unbreakable:1b,Enchantments:[{id:"minecraft:infinity",lvl:1s}]}
 give @a[team=Kankeri.Hunter] arrow 1
 give @a[team=Kankeri.Hunter] red_stained_glass 128

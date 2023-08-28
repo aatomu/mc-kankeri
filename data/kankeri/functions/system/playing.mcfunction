@@ -21,7 +21,8 @@ execute store result bossbar kankeri:time value run scoreboard players get *Game
 execute as @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind] at @s on attacker if entity @s[team=Kankeri.Hunter] as @p run function kankeri:system/bind
 #鬼の勝利判定
 execute unless entity @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind] run function kankeri:system/game/win_hunter
-
+#鬼のPlayerFinder
+execute as @a[team=Kankeri.Hunter,nbt={SelectedItem:{tag:{isPlayerFinder:1b}}}] run function kankeri:system/player_finder
 #逃げの判定
 execute as @a[team=Kankeri.Player,tag=!Kankeri.Game.Ignore] at @s if entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..0.5] run tellraw @a [{"selector":"@s"},{"text": "は 子 を 解放した!"}]
 execute as @a[team=Kankeri.Player,tag=!Kankeri.Game.Ignore] at @s if entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..0.5] run tag @a[team=Kankeri.Player,tag=Kankeri.Game.Bind] remove Kankeri.Game.Bind
