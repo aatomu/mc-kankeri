@@ -1,20 +1,21 @@
-# ボスバー
+#時間処理
+##ティックを秒に
 scoreboard players operation *TimerMin Kankeri.System = *GameTimer Kankeri.System
 scoreboard players operation *TimerMin Kankeri.System /= *20 Kankeri.System
 scoreboard players operation *TimerMin Kankeri.System /= *60 Kankeri.System
 scoreboard players operation *TimerSec Kankeri.System = *GameTimer Kankeri.System
 scoreboard players operation *TimerSec Kankeri.System /= *20 Kankeri.System
 scoreboard players operation *TimerSec Kankeri.System %= *60 Kankeri.System
-
+##ゼロパディング
 execute if score *TimerSec Kankeri.System matches 10.. run data modify entity @e[type=armor_stand,tag=Kankeri.Can.Center,limit=1] CustomName set value '{"text":""}'
 execute if score *TimerSec Kankeri.System matches ..9 run data modify entity @e[type=armor_stand,tag=Kankeri.Can.Center,limit=1] CustomName set value '{"text":"0"}'
-
+##ボスバーにテキストを反映
 execute if score *GameTimer Kankeri.System >= *TimerYellowTick Kankeri.System run bossbar set kankeri:time name [{"text":"残り時間 ","color":"green","bold": true},{"score":{"name": "*TimerMin","objective": "Kankeri.System"}},{"text":":"},{"selector":"@e[type=armor_stand,tag=Kankeri.Can.Center,limit=1]"},{"score":{"name": "*TimerSec","objective": "Kankeri.System"}}]
 execute if score *GameTimer Kankeri.System < *TimerYellowTick Kankeri.System run bossbar set kankeri:time color yellow
 execute if score *GameTimer Kankeri.System < *TimerYellowTick Kankeri.System run bossbar set kankeri:time name [{"text":"残り時間 ","color":"yellow","bold": true},{"score":{"name": "*TimerMin","objective": "Kankeri.System"}},{"text":":"},{"selector":"@e[type=armor_stand,tag=Kankeri.Can.Center,limit=1]"},{"score":{"name": "*TimerSec","objective": "Kankeri.System"}}]
 execute if score *GameTimer Kankeri.System < *TimerRedTick Kankeri.System run bossbar set kankeri:time color red
 execute if score *GameTimer Kankeri.System < *TimerRedTick Kankeri.System run bossbar set kankeri:time name [{"text":"残り時間 ","color":"red","bold": true},{"score":{"name": "*TimerMin","objective": "Kankeri.System"}},{"text":":"},{"selector":"@e[type=armor_stand,tag=Kankeri.Can.Center,limit=1]"},{"score":{"name": "*TimerSec","objective": "Kankeri.System"}}]
-
+##ボスバーに数値を反映
 execute store result bossbar kankeri:time value run scoreboard players get *GameTimer Kankeri.System
 
 #鬼
@@ -24,6 +25,10 @@ execute as @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind] at @s on attacker if e
 execute unless entity @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind] run function kankeri:system/game/win_hunter
 ##PlayerFinder
 execute as @a[team=Kankeri.Hunter,nbt={SelectedItem:{tag:{isPlayerFinder:1b}}}] run function kankeri:system/player_finder
+##エフェクト
+execute as @a[team=Kankeri.Hunter] if entity @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind,distance=200..] run effect give @s speed 5 0 true
+execute as @a[team=Kankeri.Hunter] if entity @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind,distance=100..] run effect give @s speed 3 0 true
+execute as @a[team=Kankeri.Hunter] if entity @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind,distance=10..] run effect give @s speed 1 0 true
 
 #子
 ##脱出判定
