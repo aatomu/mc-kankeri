@@ -12,6 +12,7 @@ function kankeri:system/game/team
 
 #逃げ アイテム
 give @a[team=Kankeri.Player] lingering_potion{display:{Name:'{"text": "盲目の残留ポーション","color":"gray","bold": true,"italic": false}'},CustomPotionEffects:[{Id:15,Amplifier:0b,Duration:200}],CustomPotionColor:0} 3
+give @a[team=Kankeri.Player] stick{display:{Name:'{"text": "KnockBack Stick","color":"gold","bold": true,"italic": false}'},Enchantments:[{id:"minecraft:knockback",lvl:5s}]} 1
 #逃げ エフェクト
 effect give @a[team=Kankeri.Player] resistance infinite 127 true
 #逃げ 解放Ignore
