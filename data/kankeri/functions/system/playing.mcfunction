@@ -40,6 +40,10 @@ execute as @a[team=Kankeri.Player,tag=Kankeri.Game.Bind] at @s unless entity @e[
 execute as @e[type=area_effect_cloud,nbt={Effects:[{Duration:200,Id:14}]}] at @s run particle minecraft:campfire_signal_smoke ~ ~ ~ 5 5 5 0 50 force @a
 
 #缶の判定
+##蹴り
+execute as @e[type=interaction,tag=Kankeri.Can.Interact] unless data entity @s attack{timestamp:0L} on attacker if entity @s[team=Kankeri.Hunter] at @s rotated ~ ~-50 run function kankeri:system/can/motion
+execute as @e[type=interaction,tag=Kankeri.Can.Interact] unless data entity @s attack{timestamp:0L} on attacker if entity @s[team=Kankeri.Player,tag=!Kankeri.Game.Bind] at @s rotated ~ ~-30 run function kankeri:system/can/motion
+execute as @e[type=interaction,tag=Kankeri.Can.Interact] unless data entity @s attack{timestamp:0L} run data modify entity @s attack.timestamp set value 0L
 ##子の脱出判定
 execute as @e[type=interaction,tag=Kankeri.Can.Interact,tag=!Kankeri.Can.Dropped] at @s unless entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..2] on attacker run tellraw @a [{"selector":"@s"},{"text":  " は 缶 を 蹴り飛ばした!"}]
 execute as @e[type=interaction,tag=Kankeri.Can.Interact,tag=!Kankeri.Can.Dropped] at @s unless entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..2] run tag @a[team=Kankeri.Player,tag=Kankeri.Game.Bind] remove Kankeri.Game.Bind
@@ -47,7 +51,3 @@ execute as @e[type=interaction,tag=Kankeri.Can.Interact,tag=!Kankeri.Can.Dropped
 ##缶の戻し判定
 execute as @e[type=interaction,tag=Kankeri.Can.Interact,tag=Kankeri.Can.Dropped] at @s if entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..2] on attacker run tellraw @a [{"selector":"@s"},{"text":  " は 缶 を 元に戻した!"}]
 execute as @e[type=interaction,tag=Kankeri.Can.Interact,tag=Kankeri.Can.Dropped] at @s if entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..2] run tag @s remove Kankeri.Can.Dropped
-##蹴り
-execute as @e[type=interaction,tag=Kankeri.Can.Interact] unless data entity @s attack{timestamp:0L} on attacker if entity @s[team=Kankeri.Hunter] at @s rotated ~ ~-50 run function kankeri:system/can/motion
-execute as @e[type=interaction,tag=Kankeri.Can.Interact] unless data entity @s attack{timestamp:0L} on attacker if entity @s[team=Kankeri.Player,tag=!Kankeri.Game.Bind] at @s rotated ~ ~-30 run function kankeri:system/can/motion
-execute as @e[type=interaction,tag=Kankeri.Can.Interact] unless data entity @s attack{timestamp:0L} run data modify entity @s attack.timestamp set value 0L
