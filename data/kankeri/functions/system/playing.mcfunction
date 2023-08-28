@@ -21,15 +21,16 @@ execute as @a[team=Kankeri.Hunter] on target if entity @s[team=Kankeri.Player] r
 execute unless entity @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind] run function kankeri:system/game/win_hunter
 
 #逃げの判定
-execute as @a[team=Kankeri.Player,tag=!Kankeri.Game.Ignore] at @s if entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..3] run tellraw @a [{"selector":"@s"},{"text": "は 子 を 解放した!"}]
-execute as @a[team=Kankeri.Player,tag=!Kankeri.Game.Ignore] at @s if entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..3] run tag @a[team=Kankeri.Player,tag=Kankeri.Game.Bind] remove Kankeri.Game.Bind
-execute as @a[team=Kankeri.Player,tag=!Kankeri.Game.Ignore] at @s if entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..3] run tag @s add Kankeri.Game.Ignore
-execute as @a[team=Kankeri.Player,tag=Kankeri.Game.Ignore] at @s unless entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..3] run tag @s remove Kankeri.Game.Ignore
+execute as @a[team=Kankeri.Player,tag=!Kankeri.Game.Ignore] at @s if entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..0.5] run tellraw @a [{"selector":"@s"},{"text": "は 子 を 解放した!"}]
+execute as @a[team=Kankeri.Player,tag=!Kankeri.Game.Ignore] at @s if entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..0.5] run tag @a[team=Kankeri.Player,tag=Kankeri.Game.Bind] remove Kankeri.Game.Bind
+execute as @a[team=Kankeri.Player,tag=!Kankeri.Game.Ignore] at @s if entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..0.5] run tag @s add Kankeri.Game.Ignore
+execute as @a[team=Kankeri.Player,tag=Kankeri.Game.Ignore] at @s unless entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..0.5] run tag @s remove Kankeri.Game.Ignore
 #逃げの勝利判定
 execute if score *GameTimer Kankeri.System matches 0 run function kankeri:system/game/win_player
 
-# 逃げの拘束
+#逃げの拘束
 execute as @a[team=Kankeri.Player,tag=Kankeri.Game.Bind] at @s unless entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..3] run tp @s @e[type=armor_stand,tag=Kankeri.Can.Center,limit=1]
 
-
+#もくもく
+execute as @e[type=area_effect_cloud,nbt={Effects:[{Duration:200,Id:15}]}] at @s run particle minecraft:campfire_signal_smoke ~ ~ ~ 2 2 2 0 20 force @a
 scoreboard players remove *GameTimer Kankeri.System 1
