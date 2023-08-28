@@ -1,0 +1,2 @@
+execute if score *IsCanPlaced Kankeri.System matches 1 run tellraw @s {"text":"既に缶が設置されています。古いのを削除してください","color":"red","bold": true}
+execute if score *IsCanPlaced Kankeri.System matches 0 run function kankeri:system/can/place
