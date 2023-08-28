@@ -52,5 +52,5 @@ team modify Kankeri.Player friendlyFire false
 
 
 #ボスバー
+bossbar remove kankeri:time
 bossbar add kankeri:time ""
-bossbar set kankeri:time color green
