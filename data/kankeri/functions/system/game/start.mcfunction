@@ -22,8 +22,6 @@ give @a[team=Kankeri.Player] lingering_potion{display:{Name:'{"text": "もくも
 ##エフェクト
 effect give @a[team=Kankeri.Player] minecraft:saturation 1 127
 effect give @a[team=Kankeri.Player] resistance infinite 127 true
-##解放Ignore
-tag @a[team=Kankeri.Player] add Kankeri.Game.Ignore
 
 #鬼 関連
 ##エフェクト
