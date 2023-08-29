@@ -30,7 +30,6 @@ execute as @a[team=Kankeri.Hunter,nbt={SelectedItem:{tag:{isPlayerFinder:1b}}}] 
 ##エフェクト
 execute as @a[team=Kankeri.Hunter] at @s if entity @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind,distance=200..] run effect give @s speed 1 8 true
 execute as @a[team=Kankeri.Hunter] at @s if entity @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind,distance=100..] run effect give @s speed 1 5 true
-execute as @a[team=Kankeri.Hunter] at @s if entity @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind,distance=10..] run effect give @s speed 1 3 true
 ##円のマーカー
 execute as @a[team=Kankeri.Hunter] at @s facing entity @e[type=armor_stand,tag=Kankeri.Can.Center] feet rotated ~ 0 run particle dust 1 0 1 0.2 ^ ^0.5 ^1.5 0 0 0 0 10 force @s
 #子
