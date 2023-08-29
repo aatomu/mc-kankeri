@@ -27,8 +27,6 @@ execute if entity @e[type=interaction,tag=Kankeri.Can.Interact,tag=Kankeri.Can.D
 execute unless entity @a[team=Kankeri.Player] run function kankeri:system/game/win_hunter
 ##PlayerFinder
 execute as @a[team=Kankeri.Hunter,nbt={SelectedItem:{tag:{isPlayerFinder:1b}}}] run function kankeri:system/player_finder
-##エフェクト
-execute as @a[team=Kankeri.Hunter] at @s if entity @a[team=Kankeri.Player,distance=..50] run effect give @s speed 1 1 true
 ##円のマーカー
 execute as @a[team=Kankeri.Hunter] at @s facing entity @e[type=armor_stand,tag=Kankeri.Can.Center] feet rotated ~ 0 run particle dust 1 0 1 0.2 ^ ^0.5 ^1.5 0 0 0 0 10 force @s
 #子
