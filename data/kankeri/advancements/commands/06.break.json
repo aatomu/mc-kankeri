@@ -4,7 +4,7 @@
       "item": "minecraft:end_portal_frame"
     },
     "title": "ゲームを強制終了する               ",
-    "description": "/function kankeri:system/game/end",
+    "description": "/function kankeri:game/end",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,
