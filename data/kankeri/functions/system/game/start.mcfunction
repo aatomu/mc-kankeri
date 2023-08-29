@@ -53,4 +53,3 @@ time set day
 weather clear
 ##缶を飛ばす
 execute at @e[type=armor_stand,tag=Kankeri.Can.Center] facing entity @e[sort=random,limit=1] feet rotated ~ -50 run function kankeri:system/can/motion
-tag @e[type=armor_stand,tag=Kankeri.Can.Center] add Kankeri.Can.Init
