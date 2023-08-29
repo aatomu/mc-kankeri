@@ -11,11 +11,11 @@ scoreboard players operation *TimerSec Kankeri.System %= *60 Kankeri.System
 execute if score *TimerSec Kankeri.System matches 10.. run data modify entity @e[type=armor_stand,tag=Kankeri.Can.Center,limit=1] CustomName set value '{"text":""}'
 execute if score *TimerSec Kankeri.System matches ..9 run data modify entity @e[type=armor_stand,tag=Kankeri.Can.Center,limit=1] CustomName set value '{"text":"0"}'
 ##ボスバーにテキストを反映
-execute if score *GameTimer Kankeri.System >= *TimerYellowTick Kankeri.System run bossbar set kankeri:time name [{"text":"","color":"green","bold": true},{"nbt":"Info","storage":"kankeri:_","interpret": true}]
+execute if score *GameTimer Kankeri.System >= *TimerYellowTick Kankeri.System run bossbar set kankeri:time name [{"text":"","color":"green","bold": true},{"text":"残り時間 "},{"score":{"name": "*TimerMin","objective": "Kankeri.System"}},{"text":":"},{"selector":"@e[type=armor_stand,tag=Kankeri.Can.Center,limit=1]"},{"score":{"name": "*TimerSec","objective": "Kankeri.System"}},{"text":" 残り人数:"},{"score":{"name": "*LivePlayerCount","objective": "Kankeri.System"}},{"text":"人"}]
 execute if score *GameTimer Kankeri.System < *TimerYellowTick Kankeri.System run bossbar set kankeri:time color yellow
-execute if score *GameTimer Kankeri.System < *TimerYellowTick Kankeri.System run bossbar set kankeri:time name [{"text":"","color":"yellow","bold": true},{"nbt":"Info","storage":"kankeri:_","interpret": true}]
+execute if score *GameTimer Kankeri.System < *TimerYellowTick Kankeri.System run bossbar set kankeri:time name [{"text":"","color":"yellow","bold": true},{"text":"残り時間 "},{"score":{"name": "*TimerMin","objective": "Kankeri.System"}},{"text":":"},{"selector":"@e[type=armor_stand,tag=Kankeri.Can.Center,limit=1]"},{"score":{"name": "*TimerSec","objective": "Kankeri.System"}},{"text":" 残り人数:"},{"score":{"name": "*LivePlayerCount","objective": "Kankeri.System"}},{"text":"人"}]
 execute if score *GameTimer Kankeri.System < *TimerRedTick Kankeri.System run bossbar set kankeri:time color red
-execute if score *GameTimer Kankeri.System < *TimerRedTick Kankeri.System run bossbar set kankeri:time name [{"text":"","color":"red","bold": true},{"nbt":"Info","storage":"kankeri:_","interpret": true}]
+execute if score *GameTimer Kankeri.System < *TimerRedTick Kankeri.System run bossbar set kankeri:time name [{"text":"","color":"red","bold": true},{"text":"残り時間 "},{"score":{"name": "*TimerMin","objective": "Kankeri.System"}},{"text":":"},{"selector":"@e[type=armor_stand,tag=Kankeri.Can.Center,limit=1]"},{"score":{"name": "*TimerSec","objective": "Kankeri.System"}},{"text":" 残り人数:"},{"score":{"name": "*LivePlayerCount","objective": "Kankeri.System"}},{"text":"人"}]
 ##ボスバーに数値を反映
 execute store result bossbar kankeri:time value run scoreboard players get *GameTimer Kankeri.System
 
@@ -52,3 +52,6 @@ execute as @e[type=interaction,tag=Kankeri.Can.Interact,tag=!Kankeri.Can.Dropped
 ##缶の戻し判定
 execute as @e[type=interaction,tag=Kankeri.Can.Interact,tag=Kankeri.Can.Dropped] at @s if entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..2] on attacker run tellraw @a [{"selector":"@s"},{"text":  " は 缶 を 元に戻した!"}]
 execute as @e[type=interaction,tag=Kankeri.Can.Interact,tag=Kankeri.Can.Dropped] at @s if entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..2] run tag @s remove Kankeri.Can.Dropped
+##缶の状態通知
+execute if entity @e[type=interaction,tag=Kankeri.Can.Interact,tag=Kankeri.Can.Dropped] run title @a[team=Kankeri.Hunter] actionbar {"text": "缶が円外にでている!","color": "red","bold": true}
+execute unless entity @e[type=interaction,tag=Kankeri.Can.Interact,tag=Kankeri.Can.Dropped] run title @a[team=Kankeri.Player] actionbar {"text": "缶が円内にある!","color": "red","bold": true}

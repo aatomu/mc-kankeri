@@ -48,8 +48,6 @@ bossbar add kankeri:time ""
 #ストレージ
 ##トラッカー
 data modify storage kankeri:_ Pos set value {X:0,Y:0,Z:0}
-##ステータス
-data modify storage kankeri:_ Info set value [{"text":"残り時間 "},{"score":{"name": "*TimerMin","objective": "Kankeri.System"}},{"text":":"},{"selector":"@e[type=armor_stand,tag=Kankeri.Can.Center,limit=1]"},{"score":{"name": "*TimerSec","objective": "Kankeri.System"}},{"text":" 残り人数:"},{"score":{"name": "*LivePlayerCount","objective": "Kankeri.System"}},{"text":"人"}]
 
 #Motion用
 forceload add 1 1 -1 -1
