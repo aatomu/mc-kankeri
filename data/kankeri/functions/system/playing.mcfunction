@@ -39,6 +39,8 @@ execute as @a[team=Kankeri.Player,tag=Kankeri.Game.Bind] at @s unless entity @e[
 execute as @a[team=Kankeri.Player,tag=Kankeri.Game.Bind] run effect give @s mining_fatigue 1 127 true
 ##もくもく
 execute as @e[type=area_effect_cloud,nbt={Effects:[{Duration:400,Id:14}]}] at @s run particle minecraft:campfire_signal_smoke ~ ~ ~ 5 5 5 0 50 force @a
+##缶がないとき攻撃力なし
+execute if entity @e[type=interaction,tag=Kankeri.Can.Interact,tag=Kankeri.Can.Dropped] run effect give @s weakness 1 127 true
 
 #缶の判定
 ##蹴り
