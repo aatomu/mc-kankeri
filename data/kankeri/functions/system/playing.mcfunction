@@ -38,7 +38,7 @@ execute if score *GameTimer Kankeri.System matches 0 run function kankeri:system
 execute as @a[team=Kankeri.Player,tag=Kankeri.Game.Bind] at @s unless entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..3] run tp @s @e[type=armor_stand,tag=Kankeri.Can.Center,limit=1]
 execute as @a[team=Kankeri.Player,tag=Kankeri.Game.Bind] run effect give @s mining_fatigue 1 127 true
 ##もくもく
-execute as @e[type=area_effect_cloud,nbt={Effects:[{Duration:200,Id:14}]}] at @s run particle minecraft:campfire_signal_smoke ~ ~ ~ 5 5 5 0 50 force @a
+execute as @e[type=area_effect_cloud,nbt={Effects:[{Duration:400,Id:14}]}] at @s run particle minecraft:campfire_signal_smoke ~ ~ ~ 5 5 5 0 50 force @a
 
 #缶の判定
 ##蹴り
