@@ -22,6 +22,7 @@ execute store result bossbar kankeri:time value run scoreboard players get *Game
 #鬼
 ##束縛判定
 execute if entity @e[type=interaction,tag=Kankeri.Can.Interact,tag=!Kankeri.Can.Dropped] as @a[team=Kankeri.Player] at @s on attacker if entity @s[team=Kankeri.Hunter] as @p run function kankeri:system/bind
+execute if entity @e[type=interaction,tag=Kankeri.Can.Interact,tag=Kankeri.Can.Dropped] as @a[team=Kankeri.Player] at @s on attacker if entity @s[team=Kankeri.Hunter] as @p run effect give @s glowing 3 0 true
 execute if entity @e[type=interaction,tag=Kankeri.Can.Interact,tag=Kankeri.Can.Dropped] as @a[team=Kankeri.Player] at @s on attacker if entity @s[team=Kankeri.Hunter] as @p run effect give @s blindness 10 0 true
 execute if entity @e[type=interaction,tag=Kankeri.Can.Interact,tag=Kankeri.Can.Dropped] as @a[team=Kankeri.Player] at @s on attacker if entity @s[team=Kankeri.Hunter] as @p run effect give @s slowness 10 5 true
 ##勝利判定
