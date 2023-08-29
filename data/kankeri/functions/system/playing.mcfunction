@@ -48,12 +48,12 @@ execute as @e[type=interaction,tag=Kankeri.Can.Interact] at @s unless data entit
 execute as @e[type=interaction,tag=Kankeri.Can.Interact,tag=!Kankeri.Can.Dropped] at @s if entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..10] unless data entity @s attack{timestamp:0L} on attacker if entity @s[team=Kankeri.Player] at @s rotated ~ ~-30 run function kankeri:system/can/motion
 execute as @e[type=interaction,tag=Kankeri.Can.Interact] at @s unless data entity @s attack{timestamp:0L} run data modify entity @s attack.timestamp set value 0L
 ##子の脱出判定
-execute as @e[type=interaction,tag=Kankeri.Can.Interact,tag=!Kankeri.Can.Dropped] at @s unless entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..2.5] on attacker run tellraw @a [{"selector":"@s"},{"text":  " は 缶 を 蹴り飛ばした!"}]
-execute as @e[type=interaction,tag=Kankeri.Can.Interact,tag=!Kankeri.Can.Dropped] at @s unless entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..2.5] run team join Kankeri.Player @a[team=Kankeri.Player.Bind]
-execute as @e[type=interaction,tag=Kankeri.Can.Interact,tag=!Kankeri.Can.Dropped] at @s unless entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..2.5] run tag @s add Kankeri.Can.Dropped
+execute as @e[type=interaction,tag=Kankeri.Can.Interact,tag=!Kankeri.Can.Dropped] at @s unless entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..2] on attacker run tellraw @a [{"selector":"@s"},{"text":  " は 缶 を 蹴り飛ばした!"}]
+execute as @e[type=interaction,tag=Kankeri.Can.Interact,tag=!Kankeri.Can.Dropped] at @s unless entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..2] run team join Kankeri.Player @a[team=Kankeri.Player.Bind]
+execute as @e[type=interaction,tag=Kankeri.Can.Interact,tag=!Kankeri.Can.Dropped] at @s unless entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..2] run tag @s add Kankeri.Can.Dropped
 ##缶の戻し判定
-execute as @e[type=interaction,tag=Kankeri.Can.Interact,tag=Kankeri.Can.Dropped] at @s if entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..2.5] on attacker run tellraw @a [{"selector":"@s"},{"text":  " は 缶 を 元に戻した!"}]
-execute as @e[type=interaction,tag=Kankeri.Can.Interact,tag=Kankeri.Can.Dropped] at @s if entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..2.5] run tag @s remove Kankeri.Can.Dropped
+execute as @e[type=interaction,tag=Kankeri.Can.Interact,tag=Kankeri.Can.Dropped] at @s if entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..2] on attacker run tellraw @a [{"selector":"@s"},{"text":  " は 缶 を 元に戻した!"}]
+execute as @e[type=interaction,tag=Kankeri.Can.Interact,tag=Kankeri.Can.Dropped] at @s if entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..2] run tag @s remove Kankeri.Can.Dropped
 ##缶の状態通知
 execute if entity @e[type=interaction,tag=Kankeri.Can.Interact,tag=Kankeri.Can.Dropped] run title @a[team=Kankeri.Hunter] actionbar {"text": "缶が円外にでている!","color": "red","bold": true}
 execute unless entity @e[type=interaction,tag=Kankeri.Can.Interact,tag=Kankeri.Can.Dropped] run title @a[team=Kankeri.Player] actionbar {"text": "缶が円内にある!","color": "red","bold": true}
