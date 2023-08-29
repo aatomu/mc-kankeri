@@ -13,30 +13,32 @@ function kankeri:system/game/team
 ##リセット
 clear @a[team=Kankeri.Hunter]
 clear @a[team=Kankeri.Player]
-##子 関連
-###アイテム
+
+#子 関連
+##アイテム
 give @a[team=Kankeri.Player] lingering_potion{display:{Name:'{"text": "もくもく","color":"gray","bold": true,"italic": false}'},CustomPotionEffects:[{Id:14,Amplifier:0b,Duration:200}],CustomPotionColor:0} 5
 give @a[team=Kankeri.Player] stick{display:{Name:'{"text": "のっくばっく すてぃっく","color":"gold","bold": true,"italic": false}'},Enchantments:[{id:"minecraft:knockback",lvl:5s}]} 1
 give @a[team=Kankeri.Player] sweet_berries 64
-###エフェクト
+##エフェクト
 effect give @a[team=Kankeri.Player] minecraft:saturation 1 127
 effect give @a[team=Kankeri.Player] resistance infinite 127 true
-###解放Ignore
+##解放Ignore
 tag @a[team=Kankeri.Player] add Kankeri.Game.Ignore
-##鬼 関連
-###エフェクト
+
+#鬼 関連
+##エフェクト
 effect give @a[team=Kankeri.Hunter] minecraft:saturation 1 127
 effect give @a[team=Kankeri.Hunter] slowness 5 127 true
 effect give @a[team=Kankeri.Hunter] blindness 10 0 true
 effect give @a[team=Kankeri.Hunter] darkness 10 0 true
 effect give @a[team=Kankeri.Hunter] weakness 10 127 true
 effect give @a[team=Kankeri.Hunter] resistance infinite 127 true
-####アイテム
+##アイテム
 loot give @a[team=Kankeri.Hunter] loot kankeri:player_finder
 give @a[team=Kankeri.Hunter] stick{display:{Name:'{"text": "ノックバック スティック","color":"gold","bold": true,"italic": false}'},Enchantments:[{id:"minecraft:knockback",lvl:10s}]} 1
 give @a[team=Kankeri.Hunter] bow{Unbreakable:1b,Enchantments:[{id:"minecraft:infinity",lvl:1s}]}
 give @a[team=Kankeri.Hunter] arrow 1
-give @a[team=Kankeri.Hunter] red_stained_glass 128
+give @a[team=Kankeri.Hunter] red_stained_glass 512
 give @a[team=Kankeri.Hunter] sweet_berries 64
 
 #全体処理
