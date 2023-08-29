@@ -10,7 +10,6 @@ execute as @e[type=armor_stand,tag=Kankeri.Can.Center] at @s run fill ~2 ~-1 ~2 
 #ゲーム関係
 ##プレイヤーカウンター
 execute store result score *PlayerCount Kankeri.System if entity @a[team=Kankeri.Player]
-execute store result score *LivePlayerCount Kankeri.System if entity @a[team=Kankeri.Player,tag=!Kankeri.Game.Bind]
 ##カウントダウン
 execute if score *CountDown Kankeri.System matches 0.. run function kankeri:system/countdown
 ##缶の蹴りキャンセル

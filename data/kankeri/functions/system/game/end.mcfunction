@@ -11,7 +11,7 @@ clear @a[team=Kankeri.Player]
 execute as @a at @s run playsound ui.toast.challenge_complete master @s ~ ~ ~ 0.7
 
 #リセット
-tag @a[team=Kankeri.Player] remove Kankeri.Game.Bind
+team join Kankeri.Player @a[team=Kankeri.Player.Bind]
 team join Kankeri.Player @a[team=Kankeri.Hunter]
 scoreboard players set *GameTimer Kankeri.System -1
 bossbar set kankeri:time players

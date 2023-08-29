@@ -14,7 +14,6 @@ scoreboard players set *60 Kankeri.System 60
 scoreboard players set *Hunter Kankeri.System 4
 scoreboard players set *HunterCount Kankeri.System 0
 scoreboard players set *PlayerCount Kankeri.System 0
-scoreboard players set *LivePlayerCount Kankeri.System 0
 ##フラグ
 scoreboard players add *IsCanPlaced Kankeri.System 0
 ##時間
@@ -38,6 +37,11 @@ team remove Kankeri.Player
 team add Kankeri.Player "子"
 team modify Kankeri.Player color green
 team modify Kankeri.Player friendlyFire false
+##子(束縛)
+team remove Kankeri.Player.Bind
+team add Kankeri.Player.Bind "子(束縛)"
+team modify Kankeri.Player.Bind color dark_green
+team modify Kankeri.Player.Bind friendlyFire false
 
 #ボスバー
 ##時間
