@@ -40,7 +40,7 @@ give @a[team=Kankeri.Hunter] bow{Unbreakable:1b,Enchantments:[{id:"minecraft:inf
 give @a[team=Kankeri.Hunter] arrow 1
 give @a[team=Kankeri.Hunter] red_stained_glass 512
 give @a[team=Kankeri.Hunter] dried_kelp 64
-
+give @a[team=Kankeri.Hunter] diamond_boots{Enchantments:[{id:"minecraft:frost_walker",lvl:1s}]} 1
 #全体処理
 ##TP
 tp @a[team=Kankeri.Hunter] @e[type=armor_stand,tag=Kankeri.Can.Center,limit=1]
