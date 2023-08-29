@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:stick"
+      "item": "minecraft:compass"
     },
     "title": "子を探す               ",
     "description": "Player Finder は手に持っていると子を指すぞ!",
