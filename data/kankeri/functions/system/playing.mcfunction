@@ -35,6 +35,8 @@ execute if score *GameTimer Kankeri.System matches 0 run function kankeri:system
 ##拘束処理
 execute as @a[team=Kankeri.Player.Bind] at @s unless entity @e[type=armor_stand,tag=Kankeri.Can.Center,distance=..3] run tp @s @e[type=armor_stand,tag=Kankeri.Can.Center,limit=1]
 execute as @a[team=Kankeri.Player.Bind] run effect give @s mining_fatigue 1 127 true
+execute as @a[team=Kankeri.Player.Bind,gamemode=survival] run gamemode spectator
+execute as @a[team=Kankeri.Player,gamemode=spectator] run gamemode survival
 ##もくもく
 execute as @e[type=area_effect_cloud,nbt={Effects:[{Duration:400,Id:14}]}] at @s run particle minecraft:campfire_signal_smoke ~ ~ ~ 5 5 5 0 50 force @a
 ##缶がないとき攻撃力なし
