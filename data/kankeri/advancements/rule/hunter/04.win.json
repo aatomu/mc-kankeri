@@ -1,16 +1,16 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:stick"
+      "item": "minecraft:bell"
     },
-    "title": "子を捕まえる               ",
-    "description": "子を攻撃すると缶のところに捕まえられるぞ!",
+    "title": "勝利条件               ",
+    "description": "子を時間以内に全員を捕まえると勝利!",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,
     "hidden": false
   },
-  "parent": "kankeri:rule/hunter/01.defense",
+  "parent": "kankeri:rule/hunter/03.touch",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:tick"
