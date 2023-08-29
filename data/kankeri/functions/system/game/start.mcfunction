@@ -46,5 +46,8 @@ tp @a[team=Kankeri.Player] @e[type=armor_stand,tag=Kankeri.Can.Center,limit=1]
 ##ゲームモード
 gamemode survival @a[team=Kankeri.Hunter]
 gamemode survival @a[team=Kankeri.Player]
-#缶を飛ばす
+##ワールド
+time set day
+weather clear
+##缶を飛ばす
 execute at @e[type=armor_stand,tag=Kankeri.Can.Center] facing entity @e[sort=random,limit=1] feet rotated ~ -50 run function kankeri:system/can/motion
