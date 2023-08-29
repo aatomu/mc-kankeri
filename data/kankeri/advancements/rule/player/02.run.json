@@ -1,16 +1,16 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:end_portal_frame"
+      "item": "minecraft:rabbit_foot"
     },
-    "title": "ゲームを強制終了する               ",
-    "description": "/function kankeri:system/game/end",
+    "title": "逃げる               ",
+    "description": "ポーションを使ったりして逃げ回ろう!",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,
     "hidden": false
   },
-  "parent": "kankeri:commands/05.remove",
+  "parent": "kankeri:rule/player/01.defense",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:tick"
