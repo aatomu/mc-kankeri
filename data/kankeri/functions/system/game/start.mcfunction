@@ -33,6 +33,7 @@ effect give @a[team=Kankeri.Hunter] darkness 10 0 true
 effect give @a[team=Kankeri.Hunter] weakness 10 127 true
 effect give @a[team=Kankeri.Hunter] resistance infinite 127 true
 effect give @a[team=Kankeri.Hunter] speed infinite 2 true
+effect give @a[team=Kankeri.Hunter] jump_boost infinite 1 true
 ##アイテム
 loot give @a[team=Kankeri.Hunter] loot kankeri:player_finder
 give @a[team=Kankeri.Hunter] stick{display:{Name:'{"text": "ノックバック スティック","color":"gold","bold": true,"italic": false}'},Enchantments:[{id:"minecraft:knockback",lvl:10s}]} 1
