@@ -39,9 +39,12 @@ give @a[team=Kankeri.Hunter] arrow 1
 give @a[team=Kankeri.Hunter] red_stained_glass 128
 give @a[team=Kankeri.Hunter] sweet_berries 64
 
-#全員TP
+#全体処理
+##TP
 tp @a[team=Kankeri.Hunter] @e[type=armor_stand,tag=Kankeri.Can.Center,limit=1]
 tp @a[team=Kankeri.Player] @e[type=armor_stand,tag=Kankeri.Can.Center,limit=1]
-
+##ゲームモード
+gamemode survival @a[team=Kankeri.Hunter]
+gamemode survival @a[team=Kankeri.Player]
 #缶を飛ばす
 execute at @e[type=armor_stand,tag=Kankeri.Can.Center] facing entity @e[sort=random,limit=1] feet rotated ~ -50 run function kankeri:system/can/motion
