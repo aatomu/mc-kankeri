@@ -5,7 +5,7 @@ execute as @e[type=armor_stand,tag=Kankeri.Can.Center] at @s run particle end_ro
 execute as @e[type=armor_stand,tag=Kankeri.Can.Center] at @s rotated ~180 ~ run particle end_rod ^ ^0.1 ^2.5 0 0 0 0 10 force @a
 ##周囲の保護
 execute as @e[type=armor_stand,tag=Kankeri.Can.Center] at @s run fill ~4 ~3 ~4 ~-4 ~ ~-4 air destroy
-execute as @e[type=armor_stand,tag=Kankeri.Can.Center] at @s run fill ~1 ~-1 ~1 ~-1 ~-1 ~-1 bedrock replace air
+execute as @e[type=armor_stand,tag=Kankeri.Can.Center] at @s run fill ~2 ~-1 ~2 ~-2 ~-1 ~-2 bedrock replace air
 
 #ゲーム関係
 ##プレイヤーカウンター
