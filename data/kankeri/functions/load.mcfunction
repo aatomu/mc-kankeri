@@ -18,10 +18,10 @@ scoreboard players set *PlayerCount Kankeri.System 0
 scoreboard players add *IsCanPlaced Kankeri.System 0
 ##時間
 scoreboard players set *CountDown Kankeri.System -1
-scoreboard players set *GameTimeSec Kankeri.System 300
+scoreboard players set *GameTimeSec Kankeri.System 180
 scoreboard players set *GameTimer Kankeri.System -1
 ##時間のボーダー
-scoreboard players set *TimerYellowTick Kankeri.System 2400
+scoreboard players set *TimerYellowTick Kankeri.System 120
 scoreboard players set *TimerRedTick Kankeri.System 600
 scoreboard players set *TimerMin Kankeri.System 0
 scoreboard players set *TimerSec Kankeri.System 0
