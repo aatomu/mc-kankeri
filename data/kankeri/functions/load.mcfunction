@@ -12,6 +12,8 @@ scoreboard players set *60 Kankeri.System 60
 
 scoreboard players set *Hunter Kankeri.System 4
 scoreboard players set *HunterCount Kankeri.System 0
+scoreboard players set *PlayerCount Kankeri.System 0
+scoreboard players set *LivePlayerCount Kankeri.System 0
 
 scoreboard players add *IsCanPlaced Kankeri.System 0
 
