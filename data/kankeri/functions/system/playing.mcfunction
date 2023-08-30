@@ -39,8 +39,8 @@ execute as @e[type=area_effect_cloud,nbt={Effects:[{Duration:400,Id:14}]}] at @s
 ##無効化
 execute if score *KickIgnore Kankeri.System matches 1.. run scoreboard players remove *KickIgnore Kankeri.System 1
 ##蹴り
-execute as @a[team=Kankeri.Player,predicate=kankeri:sneak] at @s if entity @e[type=armor_stand,tag=Kankeri.Can.Master,distance=..0.5] run function kankeri:system/can/check
+execute as @a[team=Kankeri.Player,predicate=kankeri:sneak] at @s if entity @e[type=armor_stand,tag=Kankeri.Can.Master,distance=..1] run function kankeri:system/can/check
 ##通知
-execute if score *KickIgnore Kankeri.System matches 0 as @e[type=item_display,tag=Kankeri.Can.Display] at @s on vehicle positioned as @s run particle dust 1 0 0 0.5 ^ ^0.1 ^0.5 0 0 0 0 10 force @a[team=Kankeri.Player]
-execute if score *KickIgnore Kankeri.System matches 0 as @e[type=item_display,tag=Kankeri.Can.Display] at @s on vehicle positioned as @s rotated ~180 ~ run particle dust 1 0 0 0.5 ^ ^0.1 ^0.5 0 0 0 0 10 force @a[team=Kankeri.Player]
+execute if score *KickIgnore Kankeri.System matches 0 as @e[type=item_display,tag=Kankeri.Can.Display] at @s on vehicle positioned as @s run particle dust 1 0 0 0.5 ^ ^0.1 ^1 0 0 0 0 10 force @a[team=Kankeri.Player]
+execute if score *KickIgnore Kankeri.System matches 0 as @e[type=item_display,tag=Kankeri.Can.Display] at @s on vehicle positioned as @s rotated ~180 ~ run particle dust 1 0 0 0.5 ^ ^0.1 ^1 0 0 0 0 10 force @a[team=Kankeri.Player]
 execute if score *KickIgnore Kankeri.System matches 0 run title @a[team=Kankeri.Player] actionbar {"text":"缶をけりに行け!","color":"red","bold":true}
