@@ -14,6 +14,7 @@ time set day
 weather clear
 function kankeri:system/can/motion
 scoreboard players set *KickIgnore Kankeri.System 400
+execute as @e[type=armor_stand,tag=Kankeri.Can.Master] at @s run fill ~15 ~5 ~15 ~-15 ~ ~-15 air
 ##プレイヤー関連
 gamemode survival @a[team=Kankeri.Player]
 clear @a[team=Kankeri.Player]
