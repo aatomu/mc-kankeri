@@ -44,8 +44,3 @@ team modify Kankeri.Player friendlyFire false
 ##時間
 bossbar remove kankeri:time
 bossbar add kankeri:time ""
-
-
-#ストレージ
-##トラッカー
-data modify storage kankeri:_ Pos set value {X:0,Y:0,Z:0}
