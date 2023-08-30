@@ -23,7 +23,7 @@ execute store result bossbar kankeri:time value run scoreboard players get *Game
 #鬼
 ##束縛判定
 execute if score *KickInterval Kankeri.System matches 0 as @a[team=Kankeri.Player,gamemode=survival,nbt={HurtTime:8s}] at @s on attacker if entity @s[team=Kankeri.Hunter] as @p run function kankeri:system/bind
-execute if score *KickInterval Kankeri.System matches 1.. at @e[type=armor_stand,tag=Kankeri.Can.Master] as @a[team=Kankeri.Player,gamemode=survival,nbt={HurtTime:8s},distance=..4] at @s on attacker if entity @s[team=Kankeri.Hunter] as @p run function kankeri:system/bind
+execute if score *KickInterval Kankeri.System matches 1.. at @e[type=armor_stand,tag=Kankeri.Can.Master] as @a[team=Kankeri.Player,gamemode=survival,nbt={HurtTime:8s},distance=..2.5] at @s on attacker if entity @s[team=Kankeri.Hunter] as @p run function kankeri:system/bind
 ##勝利判定
 execute if score *GameTimer Kankeri.System matches 0 run function kankeri:system/game/win_hunter
 execute unless entity @a[team=Kankeri.Player,gamemode=survival] run function kankeri:system/game/win_hunter
@@ -46,5 +46,5 @@ execute if score *KickInterval Kankeri.System matches 0 as @e[type=item_display,
 execute if score *KickInterval Kankeri.System matches 0 run title @a[team=Kankeri.Player] actionbar {"text":"缶をけりに行け!","color":"green","bold":true}
 execute if score *KickInterval Kankeri.System matches 1.. run title @a[team=Kankeri.Player] actionbar [{"text":"缶を蹴れるまで残り ","color":"red","bold":true},{"score":{"name": "*KickInterval","objective": "Kankeri.System"}}]
 execute if score *KickInterval Kankeri.System matches 1.. run title @a actionbar [{"text":"缶を蹴れるまで残り ","color":"red","bold":true},{"score":{"name": "*KickInterval","objective": "Kankeri.System"}}]
-execute if score *KickInterval Kankeri.System matches 1.. at @e[type=armor_stand,tag=Kankeri.Can.Master] run effect give @a[team=Kankeri.Player,distance=..4] glowing 1 0 true
-execute if score *KickInterval Kankeri.System matches 1.. at @e[type=armor_stand,tag=Kankeri.Can.Master] run effect clear @a[team=Kankeri.Player,distance=4..5] glowing
+execute if score *KickInterval Kankeri.System matches 1.. at @e[type=armor_stand,tag=Kankeri.Can.Master] run effect give @a[team=Kankeri.Player,distance=..2.5] glowing 1 0 true
+execute if score *KickInterval Kankeri.System matches 1.. at @e[type=armor_stand,tag=Kankeri.Can.Master] run effect clear @a[team=Kankeri.Player,distance=2.5..3] glowing
