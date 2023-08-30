@@ -46,3 +46,4 @@ team modify Kankeri.Player friendlyFire false
 ##時間
 bossbar remove kankeri:time
 bossbar add kankeri:time ""
+bossbar set kankeri:time players
