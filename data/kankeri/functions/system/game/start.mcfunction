@@ -33,7 +33,6 @@ give @a[team=Kankeri.Player] lingering_potion{display:{Name:'{"text": "もくも
 ###鬼関係
 ####エフェクト
 effect give @a[team=Kankeri.Hunter] blindness 10 0 true
-effect give @a[team=Kankeri.Hunter] weakness 10 127 true
 effect give @a[team=Kankeri.Hunter] minecraft:speed infinite 2 true
 ####アイテム
 give @a[team=Kankeri.Hunter] stick{display:{Name:'{"text": "ノックバック スティック","color":"gold","bold": true,"italic": false}'},Enchantments:[{id:"minecraft:knockback",lvl:10s}]} 1
