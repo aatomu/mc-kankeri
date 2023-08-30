@@ -4,7 +4,7 @@
       "item": "minecraft:stick"
     },
     "title": "子を捕まえる               ",
-    "description": "子を攻撃すると缶のところに捕まえられるぞ!",
+    "description": "子を攻撃すると捕まえられるぞ!",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,

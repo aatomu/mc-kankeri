@@ -4,7 +4,7 @@
       "item": "minecraft:piston"
     },
     "title": "缶を蹴る               ",
-    "description": "缶を蹴ることで捕まった味方を助けられる!",
+    "description": "缶を蹴ることでカウントを進めよう!",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,

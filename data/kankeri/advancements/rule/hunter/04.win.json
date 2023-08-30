@@ -4,7 +4,7 @@
       "item": "minecraft:bell"
     },
     "title": "勝利条件               ",
-    "description": "子を時間以内に全員を捕まえると勝利!",
+    "description": "・子を全員を捕まえる\n・缶を守り切る\n\nどっちか達成で勝利!",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,

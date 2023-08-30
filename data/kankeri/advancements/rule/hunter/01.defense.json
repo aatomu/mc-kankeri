@@ -4,7 +4,7 @@
       "item": "minecraft:barrier"
     },
     "title": "缶を守る               ",
-    "description": "円の中にないと捕まえられないぞ!",
+    "description": "缶をできるだけ蹴られないようにしよう!",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,
