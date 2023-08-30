@@ -3,6 +3,7 @@
 scoreboard players operation *GameTimer Kankeri.System = *GameTimeSec Kankeri.System
 scoreboard players operation *GameTimer Kankeri.System *= *20 Kankeri.System
 scoreboard players operation *GameTimer Kankeri.System *= *PlayerCount Kankeri.System
+execute if score *PlayerCount Kankeri.System matches ..4 run scoreboard players operation *GameTimer Kankeri.System *= *2 Kankeri.System
 ##ボスバー
 execute store result bossbar kankeri:time max run scoreboard players get *GameTimer Kankeri.System
 bossbar set kankeri:time color green

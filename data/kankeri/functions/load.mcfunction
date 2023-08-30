@@ -8,6 +8,7 @@ tellraw @a {"text":"コマンド,ルール等 : 進捗を確認してくださ�
 #スコアボード
 scoreboard objectives add Kankeri.System dummy
 ##定数
+scoreboard players set *2 Kankeri.System 2
 scoreboard players set *20 Kankeri.System 20
 scoreboard players set *60 Kankeri.System 60
 ##カウント
