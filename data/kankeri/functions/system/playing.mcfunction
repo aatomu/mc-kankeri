@@ -45,3 +45,4 @@ execute if score *KickIgnore Kankeri.System matches 0 as @e[type=item_display,ta
 execute if score *KickIgnore Kankeri.System matches 0 as @e[type=item_display,tag=Kankeri.Can.Display] at @s on vehicle positioned as @s rotated ~180 ~ run particle dust 1 0 0 0.5 ^ ^0.1 ^1 0 0 0 0 10 force @a[team=Kankeri.Player]
 execute if score *KickIgnore Kankeri.System matches 0 run title @a[team=Kankeri.Player] actionbar {"text":"缶をけりに行け!","color":"green","bold":true}
 execute if score *KickIgnore Kankeri.System matches 1.. run title @a[team=Kankeri.Player] actionbar [{"text":"缶を蹴れるまで残り ","color":"red","bold":true},{"score":{"name": "*KickIgnore","objective": "Kankeri.System"}}]
+execute if score *KickIgnore Kankeri.System matches 1.. run title @a actionbar [{"text":"缶を蹴れるまで残り ","color":"red","bold":true},{"score":{"name": "*KickIgnore","objective": "Kankeri.System"}}]
