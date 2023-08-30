@@ -1,3 +1,5 @@
-execute positioned 0.0 0.0 0.0 positioned ^ ^ ^1.5 run summon marker ~ ~ ~ {Tags:["Kankeri.Can.Motion","Kankeri.Can"]}
-data modify entity @e[type=armor_stand,tag=Kankeri.Can.Master,limit=1] Motion set from entity @e[type=marker,tag=Kankeri.Can.Motion,limit=1] Pos
-kill @e[type=marker,tag=Kankeri.Can.Motion]
+loot spawn ~ ~ ~ loot kankeri:motion
+execute store result entity @e[type=armor_stand,tag=Kankeri.Can.Master,limit=1] Motion[0] double 0.08 run data get entity @e[type=item,nbt={Item:{id:"minecraft:knowledge_book",tag:{isCanMotioner:1b}}},limit=1] Motion[0] 100
+execute store result entity @e[type=armor_stand,tag=Kankeri.Can.Master,limit=1] Motion[1] double 0.03 run data get entity @e[type=item,nbt={Item:{id:"minecraft:knowledge_book",tag:{isCanMotioner:1b}}},limit=1] Motion[1] 100
+execute store result entity @e[type=armor_stand,tag=Kankeri.Can.Master,limit=1] Motion[2] double 0.08 run data get entity @e[type=item,nbt={Item:{id:"minecraft:knowledge_book",tag:{isCanMotioner:1b}}},limit=1] Motion[2] 100
+kill @e[type=item,nbt={Item:{id:"minecraft:knowledge_book",tag:{isCanMotioner:1b}}},limit=1]

@@ -16,6 +16,8 @@ scoreboard players set *HunterCount Kankeri.System 0
 scoreboard players set *PlayerCount Kankeri.System 0
 ##フラグ
 scoreboard players add *IsCanPlaced Kankeri.System 0
+scoreboard players set *KickIgnore Kankeri.System 0
+scoreboard players set *KickCount Kankeri.System 0
 ##時間
 scoreboard players set *CountDown Kankeri.System -1
 scoreboard players set *GameTimeSec Kankeri.System 180
@@ -37,11 +39,6 @@ team remove Kankeri.Player
 team add Kankeri.Player "子"
 team modify Kankeri.Player color green
 team modify Kankeri.Player friendlyFire false
-##子(束縛)
-team remove Kankeri.Player.Bind
-team add Kankeri.Player.Bind "子(束縛)"
-team modify Kankeri.Player.Bind color dark_green
-team modify Kankeri.Player.Bind friendlyFire false
 
 #ボスバー
 ##時間
@@ -52,6 +49,3 @@ bossbar add kankeri:time ""
 #ストレージ
 ##トラッカー
 data modify storage kankeri:_ Pos set value {X:0,Y:0,Z:0}
-
-#Motion用
-forceload add 1 1 -1 -1
