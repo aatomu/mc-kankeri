@@ -4,7 +4,7 @@
       "item": "minecraft:knowledge_book"
     },
     "title": "ルール               ",
-    "description": "ルールについて",
+    "description": "ルールについて\n缶を蹴るのは近くでsneak",
     "frame": "challenge",
     "show_toast": false,
     "announce_to_chat": false,
