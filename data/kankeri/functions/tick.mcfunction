@@ -6,7 +6,7 @@ execute as @e[type=item_display,tag=Kankeri.Can.Display] at @s on vehicle positi
 ##周囲の保護
 execute as @e[type=armor_stand,tag=Kankeri.Can.Master] at @s run fill ~2 ~3 ~2 ~-2 ~ ~-2 air replace red_stained_glass
 execute as @e[type=armor_stand,tag=Kankeri.Can.Master] at @s run fill ~1 ~1 ~1 ~-1 ~-1 ~-1 air replace #leaves
-execute as @e[type=armor_stand,tag=Kankeri.Can.Master] at @s run kill @e[type=arrow,distance=..1]
+execute as @e[type=armor_stand,tag=Kankeri.Can.Master] at @s run kill @e[type=arrow,distance=..3]
 
 #ゲーム関係
 ##プレイヤーカウンター
