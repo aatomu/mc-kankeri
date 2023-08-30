@@ -28,7 +28,7 @@ effect give @a[team=Kankeri.Player] minecraft:resistance infinite 127 true
 tp @a[team=Kankeri.Player] @e[type=armor_stand,tag=Kankeri.Can.Master,limit=1]
 ###チーム割り当て
 function kankeri:system/game/team
-execute as @a[team=Kankeri.Hunter] run tellraw @a [{"selector":"@s"},{"text":"は 鬼 になった!"}]
+execute as @a[team=Kankeri.Hunter] run tellraw @a [{"selector":"@s"},{"text":" は 鬼 になった!"}]
 ###逃げ関係
 ####アイテム
 give @a[team=Kankeri.Player] stick{display:{Name:'{"text": "のっくばっく すてぃっく","color":"gold","bold": true,"italic": false}'},Enchantments:[{id:"minecraft:knockback",lvl:3s}]} 1
