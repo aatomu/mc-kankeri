@@ -38,7 +38,5 @@ effect give @a[team=Kankeri.Hunter] blindness 10 0 true
 effect give @a[team=Kankeri.Hunter] weakness 10 127 true
 ####アイテム
 #loot give @a[team=Kankeri.Hunter] loot kankeri:player_finder
-give @a[team=Kankeri.Hunter] crossbow{Unbreakable:1b,Enchantments:[{id:"minecraft:infinity",lvl:1s}]}
-give @a[team=Kankeri.Hunter] arrow 1
 give @a[team=Kankeri.Hunter] red_stained_glass 512
 item replace entity @a[team=Kankeri.Hunter] armor.feet with diamond_boots{Enchantments:[{id:"minecraft:frost_walker",lvl:1s}]} 1
