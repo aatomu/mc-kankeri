@@ -1,9 +1,6 @@
 #時間管理
-##秒を時間に
-scoreboard players operation *GameTimer Kankeri.System = *GameTimeSec Kankeri.System
-scoreboard players operation *GameTimer Kankeri.System *= *20 Kankeri.System
-scoreboard players operation *GameTimer Kankeri.System *= *PlayerCount Kankeri.System
-execute if score *PlayerCount Kankeri.System matches ..4 run scoreboard players operation *GameTimer Kankeri.System *= *2 Kankeri.System
+##計算
+function kankeri:system/game/time
 ##ボスバー
 execute store result bossbar kankeri:time max run scoreboard players get *GameTimer Kankeri.System
 bossbar set kankeri:time color green
@@ -14,8 +11,7 @@ bossbar set kankeri:time players @a
 time set day
 weather clear
 function kankeri:system/can/motion
-scoreboard players set *KickIgnore Kankeri.System 600
-execute as @e[type=armor_stand,tag=Kankeri.Can.Master] at @s run fill ~15 ~5 ~15 ~-15 ~ ~-15 air
+execute as @e[type=armor_stand,tag=Kankeri.Can.Master] at @s run fill ~5 ~5 ~5 ~-5 ~ ~-5 air
 ##プレイヤー関連
 gamemode survival @a[team=Kankeri.Player]
 clear @a[team=Kankeri.Player]
