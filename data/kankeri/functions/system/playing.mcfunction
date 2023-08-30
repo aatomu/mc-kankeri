@@ -23,6 +23,7 @@ execute store result bossbar kankeri:time value run scoreboard players get *Game
 ##束縛判定
 execute as @a[team=Kankeri.Player,gamemode=survival,nbt={HurtTime:8s}] at @s on attacker if entity @s[team=Kankeri.Hunter] as @p run function kankeri:system/bind
 ##勝利判定
+execute if score *GameTimer Kankeri.System matches 0 run function kankeri:system/game/win_hunter
 execute unless entity @a[team=Kankeri.Player,gamemode=survival] run function kankeri:system/game/win_hunter
 ##PlayerFinder
 execute as @a[team=Kankeri.Hunter,nbt={SelectedItem:{tag:{isPlayerFinder:1b}}}] at @s run function kankeri:system/player_finder
@@ -30,10 +31,9 @@ execute as @a[team=Kankeri.Hunter,nbt={SelectedItem:{tag:{isPlayerFinder:1b}}}] 
 execute as @a[team=Kankeri.Hunter] at @s facing entity @e[type=armor_stand,tag=Kankeri.Can.Master] feet rotated ~ 0 run particle dust 1 0 1 0.2 ^ ^0.5 ^1.5 0 0 0 0 10 force @s
 #子
 ##勝利判定
-execute if score *GameTimer Kankeri.System matches 0 run function kankeri:system/game/win_player
 execute if score *KickCount Kankeri.System = *PlayerCount Kankeri.System run function kankeri:system/game/win_player
 ##もくもく
-execute as @e[type=area_effect_cloud,nbt={Effects:[{Duration:400,Id:14}]}] at @s run particle minecraft:campfire_signal_smoke ~ ~ ~ 5 5 5 0 50 force @a
+execute as @e[type=area_effect_cloud,nbt={Effects:[{Duration:400,Id:14}]}] at @s run particle minecraft:campfire_signal_smoke ~ ~ ~ 3 3 3 0 10 force @a
 
 #缶の処理
 ##無効化
