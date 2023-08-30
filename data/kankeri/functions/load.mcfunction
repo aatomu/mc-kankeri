@@ -20,7 +20,7 @@ scoreboard players set *KickIgnore Kankeri.System 0
 scoreboard players set *KickCount Kankeri.System 0
 ##時間
 scoreboard players set *CountDown Kankeri.System -1
-scoreboard players set *GameTimeSec Kankeri.System 60
+scoreboard players set *GameTimeSec Kankeri.System 40
 scoreboard players set *GameTimer Kankeri.System -1
 ##時間のボーダー
 scoreboard players set *TimerYellowTick Kankeri.System 120
