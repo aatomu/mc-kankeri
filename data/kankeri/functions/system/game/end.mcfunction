@@ -8,7 +8,7 @@ weather clear
 scoreboard players set *GameTimer Kankeri.System -1
 scoreboard players set *KickCount Kankeri.System 0
 bossbar set kankeri:time players
-fill ~10 ~10 ~10 ~-10 ~-2 ~-10 air replace red_stained_glass
+fill ~15 ~10 ~15 ~-15 ~-5 ~-15 air replace red_stained_glass
 ##プレイヤー関連
 team join Kankeri.Player @a[team=Kankeri.Hunter]
 gamemode survival @a[team=Kankeri.Player]
