@@ -30,6 +30,7 @@ function kankeri:system/game/team
 execute as @a[team=Kankeri.Hunter] run tellraw @a [{"selector":"@s"},{"text":"は 鬼 になった!"}]
 ###逃げ関係
 ####アイテム
+give @a[team=Kankeri.Player] stick{display:{Name:'{"text": "のっくばっく すてぃっく","color":"gold","bold": true,"italic": false}'},Enchantments:[{id:"minecraft:knockback",lvl:3s}]} 1
 give @a[team=Kankeri.Player] lingering_potion{display:{Name:'{"text": "もくもく","color":"gray","bold": true,"italic": false}'},CustomPotionEffects:[{Id:14,Amplifier:0b,Duration:400,ShowParticles:false}],CustomPotionColor:0} 5
 ###鬼関係
 ####エフェクト
@@ -37,7 +38,7 @@ effect give @a[team=Kankeri.Hunter] blindness 10 0 true
 effect give @a[team=Kankeri.Hunter] weakness 10 127 true
 ####アイテム
 #loot give @a[team=Kankeri.Hunter] loot kankeri:player_finder
-give @a[team=Kankeri.Hunter] bow{Unbreakable:1b,Enchantments:[{id:"minecraft:infinity",lvl:1s}]}
+give @a[team=Kankeri.Hunter] crossbow{Unbreakable:1b,Enchantments:[{id:"minecraft:infinity",lvl:1s}]}
 give @a[team=Kankeri.Hunter] arrow 1
 give @a[team=Kankeri.Hunter] red_stained_glass 512
 item replace entity @a[team=Kankeri.Hunter] armor.feet with diamond_boots{Enchantments:[{id:"minecraft:frost_walker",lvl:1s}]} 1
