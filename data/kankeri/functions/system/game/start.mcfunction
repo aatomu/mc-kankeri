@@ -27,7 +27,7 @@ function kankeri:system/game/team
 execute as @a[team=Kankeri.Hunter] run tellraw @a [{"selector":"@s"},{"text":" は 鬼 になった!"}]
 ###逃げ関係
 ####エフェクト
-effect give @a[team=Kankeri.Player] minecraft:weakness 5 127 true
+effect give @a[team=Kankeri.Player] minecraft:weakness 10 127 true
 effect give @a[team=Kankeri.Player] minecraft:speed infinite 1 true
 ####アイテム
 give @a[team=Kankeri.Player] lingering_potion{display:{Name:'{"text": "もくもく","color":"gray","bold": true,"italic": false}'},CustomPotionEffects:[{Id:14,Amplifier:0b,Duration:400,ShowParticles:false}],CustomPotionColor:0} 5
