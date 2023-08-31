@@ -9,6 +9,7 @@ bossbar set kankeri:time players @a
 ##ワールド関係
 time set day
 weather clear
+tp @a[team=Kankeri.Player] @e[type=armor_stand,tag=Kankeri.Can.Master,limit=1]
 function kankeri:system/can/motion
 execute as @e[type=armor_stand,tag=Kankeri.Can.Master] at @s run spreadplayers ~ ~ 0 1 false @s
 execute as @e[type=armor_stand,tag=Kankeri.Can.Master] at @s run tp @s ~ ~20 ~
@@ -21,7 +22,6 @@ effect give @a[team=Kankeri.Player] minecraft:saturation 1 127 true
 effect give @a[team=Kankeri.Player] minecraft:mining_fatigue 20 127 true
 effect give @a[team=Kankeri.Player] minecraft:haste infinite 4 true
 effect give @a[team=Kankeri.Player] minecraft:resistance infinite 127 true
-tp @a[team=Kankeri.Player] @e[type=armor_stand,tag=Kankeri.Can.Master,limit=1]
 ###チーム割り当て
 function kankeri:system/game/team
 execute as @a[team=Kankeri.Hunter] run tellraw @a [{"selector":"@s"},{"text":" は 鬼 になった!"}]
