@@ -10,7 +10,8 @@ bossbar set kankeri:time players @a
 time set day
 weather clear
 function kankeri:system/can/motion
-execute as @e[type=armor_stand,tag=Kankeri.Can.Master] at @s run fill ~5 ~5 ~5 ~-5 ~ ~-5 air
+execute as @e[type=armor_stand,tag=Kankeri.Can.Master] at @s run spreadplayers ~ ~ 0 1 false @s
+execute as @e[type=armor_stand,tag=Kankeri.Can.Master] at @s run tp @s ~ ~20 ~
 ##プレイヤー関連
 gamemode survival @a[team=Kankeri.Player]
 clear @a[team=Kankeri.Player]
@@ -32,7 +33,6 @@ effect give @a[team=Kankeri.Player] minecraft:speed infinite 1 true
 give @a[team=Kankeri.Player] lingering_potion{display:{Name:'{"text": "もくもく","color":"gray","bold": true,"italic": false}'},CustomPotionEffects:[{Id:14,Amplifier:0b,Duration:400,ShowParticles:false}],CustomPotionColor:0} 5
 ###鬼関係
 ####エフェクト
-effect give @a[team=Kankeri.Hunter] blindness 10 0 true
 effect give @a[team=Kankeri.Hunter] minecraft:speed infinite 2 true
 ####アイテム
 give @a[team=Kankeri.Hunter] stick{display:{Name:'{"text": "ノックバック スティック","color":"gold","bold": true,"italic": false}'},Enchantments:[{id:"minecraft:knockback",lvl:10s}]} 1
