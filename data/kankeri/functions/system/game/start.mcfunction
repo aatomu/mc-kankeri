@@ -11,8 +11,6 @@ time set day
 weather clear
 tp @a[team=Kankeri.Player] @e[type=armor_stand,tag=Kankeri.Can.Master,limit=1]
 function kankeri:system/can/motion
-execute as @e[type=armor_stand,tag=Kankeri.Can.Master] at @s run spreadplayers ~ ~ 0 1 false @s
-execute as @e[type=armor_stand,tag=Kankeri.Can.Master] at @s run tp @s ~ ~20 ~
 ##プレイヤー関連
 gamemode survival @a[team=Kankeri.Player]
 clear @a[team=Kankeri.Player]
