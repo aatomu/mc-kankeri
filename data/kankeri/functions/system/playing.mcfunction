@@ -47,4 +47,4 @@ execute as @a[team=Kankeri.Hunter] at @s facing entity @e[type=armor_stand,tag=K
 ##勝利判定
 execute if score *KickCount Kankeri.System = *PlayerCount Kankeri.System run function kankeri:system/game/win_player
 ##もくもく
-execute as @e[type=area_effect_cloud,nbt={Effects:[{Duration:400,Id:14}]}] at @s run particle minecraft:campfire_signal_smoke ~ ~ ~ 3 3 3 0 10 force @a
+execute as @e[type=area_effect_cloud,nbt={Effects:[{Duration:400,Id:14}]}] at @s run particle minecraft:campfire_signal_smoke ~ ~ ~ 1 1 1 0 10 force @a
