@@ -10,7 +10,7 @@
     "announce_to_chat": false,
     "hidden": false
   },
-  "parent": "kankeri:rule/player/01.defense",
+  "parent": "kankeri:rule/player/02.escape",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:tick"
