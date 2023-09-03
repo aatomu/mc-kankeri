@@ -1,6 +1,6 @@
 #通知
 tellraw @a {"text":"Kankeri Datapack Is Loaded"}
-tellraw @a {"text":"Main Creator  : @atomu21263"}
+tellraw @a {"text":"Main Creator  : @aatomu"}
 tellraw @a {"text":"Commands,Rule : Check For Advancement."}
 tellraw @a {"text":"コマンド,ルール等 : 進捗を確認してください"}
 
