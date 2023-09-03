@@ -36,6 +36,7 @@ execute if score *KickInterval Kankeri.System matches 1.. at @e[type=armor_stand
 ##束縛判定
 execute if score *KickInterval Kankeri.System matches 0 as @a[team=Kankeri.Player,gamemode=survival,nbt={HurtTime:8s}] at @s on attacker if entity @s[team=Kankeri.Hunter] as @p run function kankeri:system/bind
 execute if score *KickInterval Kankeri.System matches 1.. at @e[type=armor_stand,tag=Kankeri.Can.Master] as @a[team=Kankeri.Player,gamemode=survival,nbt={HurtTime:8s},distance=..1.5] at @s on attacker if entity @s[team=Kankeri.Hunter] as @p run function kankeri:system/bind
+execute if score *KickInterval Kankeri.System matches 1.. at @e[type=armor_stand,tag=Kankeri.Can.Master] as @a[team=Kankeri.Player,gamemode=survival,nbt={HurtTime:8s}] at @s on attacker if entity @s[team=Kankeri.Hunter] as @p run effect give @s levitation 5 3 true
 ##勝利判定
 execute if score *GameTimer Kankeri.System matches 0 run function kankeri:system/game/win_hunter
 execute unless entity @a[team=Kankeri.Player,gamemode=survival] run function kankeri:system/game/win_hunter
