@@ -14,10 +14,10 @@ function kankeri:system/can/motion
 ##プレイヤー関連
 gamemode survival @a[team=Kankeri.Player]
 clear @a[team=Kankeri.Player]
-give @a[team=Kankeri.Player] dried_kelp 64
+give @a[team=Kankeri.Player] dried_kelp 20
 effect clear @a[team=Kankeri.Player]
 effect give @a[team=Kankeri.Player] minecraft:saturation 1 127 true
-effect give @a[team=Kankeri.Player] minecraft:mining_fatigue 20 127 true
+effect give @a[team=Kankeri.Player] minecraft:weakness 10 127 true
 effect give @a[team=Kankeri.Player] minecraft:haste infinite 4 true
 effect give @a[team=Kankeri.Player] minecraft:resistance infinite 127 true
 execute as @e[type=armor_stand,tag=Kankeri.Can.Master] at @s run spreadplayers ~ ~ 0 50 false @a[team=Kankeri.Player]
@@ -26,7 +26,7 @@ function kankeri:system/game/team
 execute as @a[team=Kankeri.Hunter] run tellraw @a [{"selector":"@s"},{"text":" は 鬼 になった!"}]
 ###逃げ関係
 ####エフェクト
-effect give @a[team=Kankeri.Player] minecraft:weakness 10 127 true
+effect give @a[team=Kankeri.Player] minecraft:mining_fatigue 20 127 true
 effect give @a[team=Kankeri.Player] minecraft:speed infinite 1 true
 ####アイテム
 give @a[team=Kankeri.Player] lingering_potion{display:{Name:'{"text": "もくもく","color":"gray","bold": true,"italic": false}'},CustomPotionEffects:[{Id:14,Amplifier:0b,Duration:400,ShowParticles:false}],CustomPotionColor:0} 5
