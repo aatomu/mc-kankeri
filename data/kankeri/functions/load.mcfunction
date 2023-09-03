@@ -7,6 +7,8 @@ tellraw @a {"text":"コマンド,ルール等 : 進捗を確認してくださ�
 
 #スコアボード
 scoreboard objectives add Kankeri.System dummy
+scoreboard objectives add Kankeri.Count dummy "蹴った回数ランキング"
+scoreboard objectives setdisplay sidebar Kankeri.Count
 ##定数
 scoreboard players set *2 Kankeri.System 2
 scoreboard players set *20 Kankeri.System 20
@@ -40,7 +42,7 @@ team modify Kankeri.Hunter friendlyFire false
 team remove Kankeri.Player
 team add Kankeri.Player "子"
 team modify Kankeri.Player color green
-team modify Kankeri.Player friendlyFire false
+team modify Kankeri.Player friendlyFire true
 
 #ボスバー
 ##時間

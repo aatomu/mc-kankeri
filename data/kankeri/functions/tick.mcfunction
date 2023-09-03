@@ -12,6 +12,7 @@ execute as @e[type=armor_stand,tag=Kankeri.Can.Master] at @s run fill ~1 ~2 ~1 ~
 ##プレイヤーカウンター
 execute store result score *PlayerCount Kankeri.System if entity @a[team=Kankeri.Player]
 execute if score *PlayerCount Kankeri.System matches ..4 if score *GameTimer Kankeri.System matches 0.. run scoreboard players operation *PlayerCount Kankeri.System *= *2 Kankeri.System
+execute if score *Hunter Kankeri.System matches 0 if score *GameTimer Kankeri.System matches 0.. run scoreboard players set *PlayerCount Kankeri.System 999
 ##カウントダウン
 execute if score *CountDown Kankeri.System matches 0.. run function kankeri:system/countdown
 ##ゲームシステム
