@@ -36,7 +36,7 @@ execute if score *KickInterval Kankeri.System matches 0 as @a[team=Kankeri.Playe
 execute if score *KickInterval Kankeri.System matches 1.. at @e[type=armor_stand,tag=Kankeri.Can.Master] align xz positioned ~0.5 ~ ~0.5 as @a[team=Kankeri.Player,gamemode=survival,nbt={HurtTime:8s},distance=..2.4] at @s on attacker if entity @s[team=Kankeri.Hunter] as @p run function kankeri:system/bind
 execute if score *KickInterval Kankeri.System matches 1.. at @e[type=armor_stand,tag=Kankeri.Can.Master] align xz positioned ~0.5 ~ ~0.5 run effect give @a[team=Kankeri.Player,distance=..2.4] glowing 1 0 true
 execute if score *KickInterval Kankeri.System matches 1.. at @e[type=armor_stand,tag=Kankeri.Can.Master] align xz positioned ~0.5 ~ ~0.5 run effect clear @a[team=Kankeri.Player,distance=2.4..3.5] glowing
-execute if score *KickInterval Kankeri.System matches 1.. at @e[type=armor_stand,tag=Kankeri.Can.Master] align xz positioned ~0.5 ~ ~0.5 as @a[team=Kankeri.Player,gamemode=survival,nbt={HurtTime:8s}] at @s on attacker if entity @s[team=Kankeri.Hunter] as @p run effect give @s slowness 10 5 true
+execute if score *KickInterval Kankeri.System matches 1.. at @e[type=armor_stand,tag=Kankeri.Can.Master] align xz positioned ~0.5 ~ ~0.5 as @a[team=Kankeri.Player,gamemode=survival,nbt={HurtTime:8s}] at @s on attacker if entity @s[team=Kankeri.Hunter] as @p run effect give @s slowness 10 127 true
 ##勝利判定
 execute if score *GameTimer Kankeri.System matches 0 run function kankeri:system/game/win_hunter
 execute unless entity @a[team=Kankeri.Player,gamemode=survival] run function kankeri:system/game/win_hunter

@@ -7,7 +7,7 @@ tellraw @a {"text":"コマンド,ルール等 : 進捗を確認してくださ�
 
 #スコアボード
 scoreboard objectives add Kankeri.System dummy
-scoreboard objectives add Kankeri.Count dummy "蹴った回数ランキング"
+scoreboard objectives add Kankeri.Count dummy "缶蹴り ランキング"
 scoreboard objectives setdisplay sidebar Kankeri.Count
 ##定数
 scoreboard players set *2 Kankeri.System 2
