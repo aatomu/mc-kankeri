@@ -29,8 +29,8 @@ execute at @e[type=armor_stand,tag=Kankeri.Can.Master] align xz positioned ~0.5 
 execute if score *KickInterval Kankeri.System matches 0 run title @a[team=Kankeri.Player] actionbar {"text":"缶をけりに行け!","color":"green","bold":true}
 execute if score *KickInterval Kankeri.System matches 1.. run title @a[team=Kankeri.Player] actionbar [{"text":"缶を蹴れるまで残り ","color":"red","bold":true},{"score":{"name": "*KickInterval","objective": "Kankeri.System"}}]
 execute if score *KickInterval Kankeri.System matches 1.. run title @a actionbar [{"text":"缶を蹴れるまで残り ","color":"red","bold":true},{"score":{"name": "*KickInterval","objective": "Kankeri.System"}}]
-execute if score *KickInterval Kankeri.System matches 1.. at @e[type=armor_stand,tag=Kankeri.Can.Master] run effect give @a[team=Kankeri.Player,distance=..2.4] glowing 1 0 true
-execute if score *KickInterval Kankeri.System matches 1.. at @e[type=armor_stand,tag=Kankeri.Can.Master] run effect clear @a[team=Kankeri.Player,distance=2.4..3.5] glowing
+execute if score *KickInterval Kankeri.System matches 1.. at @e[type=armor_stand,tag=Kankeri.Can.Master] align xz positioned ~0.5 ~ ~0.5 run effect give @a[team=Kankeri.Player,distance=..2.4] glowing 1 0 true
+execute if score *KickInterval Kankeri.System matches 1.. at @e[type=armor_stand,tag=Kankeri.Can.Master] align xz positioned ~0.5 ~ ~0.5 run effect clear @a[team=Kankeri.Player,distance=2.4..3.5] glowing
 
 #鬼
 ##束縛判定
